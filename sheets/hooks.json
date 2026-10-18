@@ -1,0 +1,285 @@
+{
+  "sheet": "hooks",
+  "about": "Every place the mod touches KH2 (Steam Global, exe sha256 9002b2de6a1f91a790bd0673de125d1cf833f7942bfec827cdcf6ba64d5849ed). RVAs are relative to KINGDOM HEARTS II FINAL MIX.exe. kind=func rows are native functions the mod hooks or calls and are byte-checked before use; kind=data rows are memory it reads or writes.",
+  "columns": [
+    "key",
+    "kind",
+    "rva",
+    "signature",
+    "use",
+    "access",
+    "evidence"
+  ],
+  "rows": [
+    {
+      "key": "EntityUpdateLoop",
+      "kind": "func",
+      "rva": "0x3BF5E0",
+      "signature": "40534883ec6048897c2478488d4c2420",
+      "use": "hooked: the mod's per-frame game-thread tick runs before the native loop",
+      "access": "hook",
+      "evidence": "kh2-multiplayer pointer_map (CONFIRMED) + prologue bytes read from this exe"
+    },
+    {
+      "key": "FreezePredicate",
+      "kind": "func",
+      "rva": "0x3BAA80",
+      "signature": "f78120010000000008100f95c0c3cccc",
+      "use": "hooked: when KH2 finds one of our frozen actors frozen, the hook also sets its 'updated this frame' bit (+0x9B8 0x800) so KH2's deferred-child loop (0x3BF660) can finish",
+      "access": "hook",
+      "evidence": "disassembled here: 0x3BFD30 calls it first; ripsample showed the loop at 0x3BF660-0x3BF6FD spinning when a frozen parent never set 0x800"
+    },
+    {
+      "key": "RequestTransition",
+      "kind": "func",
+      "rva": "0x152990",
+      "signature": "48895c240848896c2410488974241857",
+      "use": "called to reload a room with an encounter battle program and to return to the field",
+      "access": "call",
+      "evidence": "kh2-multiplayer pointer_map (GHIDRA+LIVE, 50 warps) + prologue bytes read from this exe"
+    },
+    {
+      "key": "TakeDamage",
+      "kind": "func",
+      "rva": "0x3D5E50",
+      "signature": "48895c240848896c2410488974241857",
+      "use": "called to apply spell damage (negative) and healing (positive) through the game's own HP path",
+      "access": "call",
+      "evidence": "kh2-multiplayer EntityHook notes (VUH-1501) + prologue bytes read from this exe"
+    },
+    {
+      "key": "HandleResolve",
+      "kind": "func",
+      "rva": "0x4AD270",
+      "signature": "85c9750333c0c3e974010000cccccccc",
+      "use": "called to turn an actor's next-handle into a pointer while walking the active list",
+      "access": "call",
+      "evidence": "disassembled here: used by 0x3BF7A0 list walk"
+    },
+    {
+      "key": "ActiveListHead",
+      "kind": "data",
+      "rva": "0x2A171C8",
+      "signature": "qword",
+      "use": "first actor of the active actor list",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (CONFIRMED); same rip target seen in 0x3BF605"
+    },
+    {
+      "key": "FrozenGroups",
+      "kind": "data",
+      "rva": "0x2A171E8",
+      "signature": "u32 bitset",
+      "use": "freezes whole actor groups (bit n = group n) to make turns",
+      "access": "readwrite",
+      "evidence": "disassembled here: 0x3BFA40 tests bit [group] where group=0x3B5DC0(actor)"
+    },
+    {
+      "key": "InField",
+      "kind": "data",
+      "rva": "0x9BA8D0",
+      "signature": "u8",
+      "use": "room is live (1) or loading (0)",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (GHIDRA)"
+    },
+    {
+      "key": "CutsceneState",
+      "kind": "data",
+      "rva": "0xB65210",
+      "signature": "i32",
+      "use": "nonzero while a cutscene timeline runs: no encounters, no turn logic",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (GHIDRA)"
+    },
+    {
+      "key": "EventContext",
+      "kind": "data",
+      "rva": "0x2A11478",
+      "signature": "qword",
+      "use": "nonzero during scripted events: no encounters",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (GHIDRA)"
+    },
+    {
+      "key": "OpenMenu",
+      "kind": "data",
+      "rva": "0x7435D0",
+      "signature": "u8",
+      "use": "0xFF when no menu is open",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (KH2LIB)"
+    },
+    {
+      "key": "PauseBlockers",
+      "kind": "data",
+      "rva": "0xABB878",
+      "signature": "u32",
+      "use": "0 when the pause menu may open; read only to know the game is paused",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (GHIDRA)"
+    },
+    {
+      "key": "BattleStatus",
+      "kind": "data",
+      "rva": "0x2A11404",
+      "signature": "u32",
+      "use": "2 = forced (story/boss) battle",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (GHIDRA)"
+    },
+    {
+      "key": "Now",
+      "kind": "data",
+      "rva": "0x717008",
+      "signature": "u8 world,u8 room,u16 door,u16 map,u16 btl,u16 evt",
+      "use": "current location and programs",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (CONFIRMED)"
+    },
+    {
+      "key": "Slot0",
+      "kind": "data",
+      "rva": "0x2A23598",
+      "signature": "unit slot: +0x0 HP i32, +0x4 MaxHP i32",
+      "use": "Roxas HP and max HP",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets slot0::HP (CONFIRMED)"
+    },
+    {
+      "key": "SaveBase",
+      "kind": "data",
+      "rva": "0x9A98B0",
+      "signature": "KH2J save body",
+      "use": "inventory counts (Potion +0x3580, Ether +0x3582, Hi-Potion +0x3581)",
+      "access": "readwrite",
+      "evidence": "kh2-multiplayer pointer_map (Archipelago, CONFIRMED label)"
+    },
+    {
+      "key": "ActorNextHandle",
+      "kind": "data",
+      "rva": "actor+0xA90",
+      "signature": "u32 handle",
+      "use": "next actor in the active list",
+      "access": "read",
+      "evidence": "disassembled here: 0x3BF7BE"
+    },
+    {
+      "key": "ActorObjEntry",
+      "kind": "data",
+      "rva": "actor+0x918",
+      "signature": "qword -> objentry row (+0 id u32, +4 type u8, +8 name char[32])",
+      "use": "who an actor is: type 0 player, 1 party, 3 boss, 4 mob",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets (CONFIRMED)"
+    },
+    {
+      "key": "ActorStatus",
+      "kind": "data",
+      "rva": "actor+0x5C0",
+      "signature": "qword -> status (+0 HP i32, +4 MaxHP i32)",
+      "use": "enemy HP for the turn order and victory check",
+      "access": "read",
+      "evidence": "kh2-multiplayer EnemySync ACTOR_STATUS"
+    },
+    {
+      "key": "ActorPos",
+      "kind": "data",
+      "rva": "actor+0x670",
+      "signature": "float x,y,z,w (entity transform 0x640 + 0x30)",
+      "use": "Roxas steps for the encounter meter; position restore after a battle",
+      "access": "readwrite",
+      "evidence": "kh2-multiplayer KH2Offsets entity::POS_X (CONFIRMED)"
+    },
+    {
+      "key": "ActorAnim",
+      "kind": "data",
+      "rva": "actor+0x180",
+      "signature": "u32 motion id (0 idle,1 walk,2 run)",
+      "use": "an attack turn ends when Roxas returns to idle/run after hitting",
+      "access": "read",
+      "evidence": "kh2-multiplayer KH2Offsets actor::ANIM_ID (CONFIRMED)"
+    },
+    {
+      "key": "SwapChainPresent",
+      "kind": "func",
+      "rva": "vtable[8] of IDXGISwapChain",
+      "signature": "dxgi vtable",
+      "use": "hooked to draw the FFX-style battle UI with Dear ImGui (DX11 and DX12)",
+      "access": "hook",
+      "evidence": "standard DXGI vtable layout"
+    },
+    {
+      "key": "D3D12ExecuteCommandLists",
+      "kind": "func",
+      "rva": "vtable[10] of ID3D12CommandQueue",
+      "signature": "d3d12 vtable",
+      "use": "hooked only to learn the game's DX12 queue for ImGui",
+      "access": "hook",
+      "evidence": "standard D3D12 vtable layout"
+    },
+    {
+      "key": "CameraApply",
+      "kind": "func",
+      "rva": "0x165700",
+      "signature": "488bc448895818488968205657415441",
+      "use": "hooked: before KH2 eases its camera toward the raw eye (+0x64/+0x74) and look-at (+0x84/+0x94) targets, the hook writes the FFX battle camera there, so the camera glides to it and the player can't turn it",
+      "access": "hook",
+      "evidence": "disassembled here: the per-frame camera task 0x164860 -> 0x166100 ends with 0x165700(cam), which smooths +0x08/+0x18 from +0x84/+0x64 via 0x165BD0"
+    },
+    {
+      "key": "InputCollector",
+      "kind": "func",
+      "rva": "0x105810",
+      "signature": "4c8bdc564881ecf0000000488b05d639",
+      "use": "hooked: during battles the hook clears raw pad slot 0 after KH2 reads it (no walking, camera, KH2 menus) and presses Cross for the FFX Attack",
+      "access": "hook",
+      "evidence": "kh2-multiplayer pointer_map (GHIDRA, CONFIRMED) + prologue bytes read from this exe"
+    },
+    {
+      "key": "SetFacing",
+      "kind": "func",
+      "rva": "0x3B6560",
+      "signature": "40534883ec400f29742430488bd90f28",
+      "use": "called (actor, yaw in xmm1) to turn battlers toward the other line; yaw = atan2(dx, dz)",
+      "access": "call",
+      "evidence": "disassembled here: writes the rotation at +0x680 and target yaw +0x7A8; kh2-multiplayer ScriptMirror maps obj_set_rot to it"
+    },
+    {
+      "key": "InputStructPtr",
+      "kind": "data",
+      "rva": "0x79CF00",
+      "signature": "qword",
+      "use": "pointer to KH2's input struct; raw pad slot 0 is at +0x18 (u16 PS2 buttons, then right and left stick bytes, 0x80 = centre)",
+      "access": "readwrite",
+      "evidence": "kh2-multiplayer KH2Offsets (CONFIRMED)"
+    },
+    {
+      "key": "CameraStruct",
+      "kind": "data",
+      "rva": "0x718C60",
+      "signature": "camera",
+      "use": "KH2's camera: +0x08 eased look-at, +0x18 eased eye, +0x64/+0x74 raw eye, +0x84/+0x94 raw look-at",
+      "access": "readwrite",
+      "evidence": "kh2-multiplayer pointer_map (CONFIRMED) + 0x165700 here"
+    },
+    {
+      "key": "CommandExec",
+      "kind": "func",
+      "rva": "0x3D6FC0",
+      "signature": "48895c2410574883ec3081a124010000",
+      "use": "called (actor, record) to run a KH2 command (magic, item, guard) on a battler: record +0 u16 command id, +8 target actor handle, +0x14 -1",
+      "access": "call",
+      "evidence": "disassembled here: dispatches on the command table's Execute (+2) field; magic stores the spell (+0xDA8) and the target from record +8; kh2-multiplayer CLONE_NEUTRAL_INPUT notes it runs FIELD_COMMAND's record"
+    },
+    {
+      "key": "CommandLookup",
+      "kind": "func",
+      "rva": "0x3B68B0",
+      "signature": "40534883ec30488b152bf96502488d1d",
+      "use": "called (command id) for the command table row: +2 Execute, +28 MP cost",
+      "access": "call",
+      "evidence": "disassembled here: 0x3D6FC0 calls it with the record's id and reads +2"
+    }
+  ]
+}

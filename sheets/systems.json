@@ -1,0 +1,350 @@
+{
+  "sheet": "systems",
+  "about": "Tunable rules of the battle and encounter systems. Each row is one setting the C++ reads as a constant.",
+  "columns": [
+    "key",
+    "value",
+    "unit",
+    "description"
+  ],
+  "rows": [
+    {
+      "key": "groupPlayer",
+      "value": 0,
+      "unit": "group",
+      "description": "FrozenGroups bit for the player (objentry type 0)"
+    },
+    {
+      "key": "groupParty",
+      "value": 1,
+      "unit": "group",
+      "description": "FrozenGroups bit for party members (type 1)"
+    },
+    {
+      "key": "groupBoss",
+      "value": 3,
+      "unit": "group",
+      "description": "FrozenGroups bit for bosses (type 3)"
+    },
+    {
+      "key": "groupMob",
+      "value": 4,
+      "unit": "group",
+      "description": "FrozenGroups bit for regular enemies (type 4)"
+    },
+    {
+      "key": "ctbBaseRank",
+      "value": 3,
+      "unit": "rank",
+      "description": "FFX: a normal action costs TickSpeed*3"
+    },
+    {
+      "key": "ctbFirstTurnMin",
+      "value": 1,
+      "unit": "rank",
+      "description": "first turn delay = TickSpeed * random(min..max)"
+    },
+    {
+      "key": "ctbFirstTurnMax",
+      "value": 3,
+      "unit": "rank",
+      "description": "first turn delay upper bound"
+    },
+    {
+      "key": "ctbPreviewCount",
+      "value": 10,
+      "unit": "turns",
+      "description": "turns shown in the CTB order list, as in FFX"
+    },
+    {
+      "key": "attackHitGraceSec",
+      "value": 1.1,
+      "unit": "s",
+      "description": "after Roxas's first hit lands, how long his combo may continue"
+    },
+    {
+      "key": "enemyHitGraceSec",
+      "value": 1.0,
+      "unit": "s",
+      "description": "after an enemy's hit lands, how long before its turn ends"
+    },
+    {
+      "key": "turnIntroSec",
+      "value": 1.0,
+      "unit": "s",
+      "description": "pause showing whose turn it is"
+    },
+    {
+      "key": "defendDamageMul",
+      "value": 0.5,
+      "unit": "x",
+      "description": "damage taken while defending"
+    },
+    {
+      "key": "encounterMeterMin",
+      "value": 2200,
+      "unit": "units",
+      "description": "least distance walked in a field room before an encounter"
+    },
+    {
+      "key": "encounterMeterMax",
+      "value": 4200,
+      "unit": "units",
+      "description": "most distance walked before an encounter"
+    },
+    {
+      "key": "encounterMinGapSec",
+      "value": 6.0,
+      "unit": "s",
+      "description": "no new encounter within this time of returning to the field"
+    },
+    {
+      "key": "shatterSec",
+      "value": 0.9,
+      "unit": "s",
+      "description": "length of the FFX screen-shatter transition"
+    },
+    {
+      "key": "victorySec",
+      "value": 4.5,
+      "unit": "s",
+      "description": "how long the victory banner and fanfare show before returning"
+    },
+    {
+      "key": "loadTimeoutSec",
+      "value": 20.0,
+      "unit": "s",
+      "description": "give up waiting for a room load after this long and restore normal play"
+    },
+    {
+      "key": "excludedObjectIds",
+      "value": [
+        865,
+        1656,
+        1239,
+        2095,
+        2156
+      ],
+      "unit": "objectId",
+      "description": "actors never given turns: Twilight Thorn's energy ball and the Struggle opponents (Seifer, Hayner, Setzer, Vivi)"
+    },
+    {
+      "key": "formationGap",
+      "value": 520.0,
+      "unit": "units",
+      "description": "distance between the party line and the enemy line"
+    },
+    {
+      "key": "formationEnemySpacing",
+      "value": 190.0,
+      "unit": "units",
+      "description": "side-by-side spacing of enemies in their line"
+    },
+    {
+      "key": "formationPartySpacing",
+      "value": 170.0,
+      "unit": "units",
+      "description": "side-by-side spacing of party members in their line"
+    },
+    {
+      "key": "cameraBack",
+      "value": 570.0,
+      "unit": "units",
+      "description": "battle camera distance behind the party line"
+    },
+    {
+      "key": "cameraSide",
+      "value": 150.0,
+      "unit": "units",
+      "description": "battle camera offset to the party's right, FFX's over-the-shoulder angle"
+    },
+    {
+      "key": "cameraHeight",
+      "value": 310.0,
+      "unit": "units",
+      "description": "battle camera height above the party's feet"
+    },
+    {
+      "key": "cameraLookHeight",
+      "value": 110.0,
+      "unit": "units",
+      "description": "height of the point the battle camera looks at"
+    },
+    {
+      "key": "cameraLookAhead",
+      "value": 0.55,
+      "unit": "x gap",
+      "description": "how far toward the enemy line the camera looks (0 party, 1 enemies)"
+    },
+    {
+      "key": "stepSec",
+      "value": 0.6,
+      "unit": "s",
+      "description": "time a battler takes to step out to its target or back to its place"
+    },
+    {
+      "key": "attackReach",
+      "value": 130.0,
+      "unit": "units",
+      "description": "how close Roxas steps to his target before swinging"
+    },
+    {
+      "key": "enemyReach",
+      "value": 150.0,
+      "unit": "units",
+      "description": "how close an enemy steps to Roxas before its own attack takes over"
+    },
+    {
+      "key": "attackFallbackPower",
+      "value": 0.35,
+      "unit": "x max HP",
+      "description": "damage of the Attack command if the swing misses (fraction of the target's max HP)"
+    },
+    {
+      "key": "partnerReach",
+      "value": 130.0,
+      "unit": "units",
+      "description": "how close a partner steps to its target before its own attack"
+    },
+    {
+      "key": "guardSec",
+      "value": 0.7,
+      "unit": "s",
+      "description": "how long Sora's Guard plays on Defend"
+    },
+    {
+      "key": "settleSec",
+      "value": 0.9,
+      "unit": "s",
+      "description": "pause after an action before everyone walks back (everyone is frozen: nobody acts out of turn)"
+    },
+    {
+      "key": "hideDepth",
+      "value": 6000.0,
+      "unit": "units",
+      "description": "how far below the floor a world's enemies wait, frozen, until an encounter calls them"
+    },
+    {
+      "key": "encounterMaxFoes",
+      "value": 4,
+      "unit": "foes",
+      "description": "most enemies in one random encounter"
+    },
+    {
+      "key": "encounterDistance",
+      "value": 360.0,
+      "unit": "units",
+      "description": "how far in front of the party an encounter's enemy line forms"
+    },
+    {
+      "key": "testEnemyHpMul",
+      "value": 5.0,
+      "unit": "x",
+      "description": "test mode only: enemies in test battles get this many times their HP, for longer, harder fights"
+    }
+  ],
+  "ctbTickTable": {
+    "columns": [
+      "agilityMin",
+      "agilityMax",
+      "tickSpeed"
+    ],
+    "rows": [
+      {
+        "agilityMin": 0,
+        "agilityMax": 0,
+        "tickSpeed": 28
+      },
+      {
+        "agilityMin": 1,
+        "agilityMax": 1,
+        "tickSpeed": 26
+      },
+      {
+        "agilityMin": 2,
+        "agilityMax": 2,
+        "tickSpeed": 24
+      },
+      {
+        "agilityMin": 3,
+        "agilityMax": 3,
+        "tickSpeed": 22
+      },
+      {
+        "agilityMin": 4,
+        "agilityMax": 4,
+        "tickSpeed": 20
+      },
+      {
+        "agilityMin": 5,
+        "agilityMax": 6,
+        "tickSpeed": 16
+      },
+      {
+        "agilityMin": 7,
+        "agilityMax": 8,
+        "tickSpeed": 15
+      },
+      {
+        "agilityMin": 9,
+        "agilityMax": 10,
+        "tickSpeed": 14
+      },
+      {
+        "agilityMin": 11,
+        "agilityMax": 13,
+        "tickSpeed": 13
+      },
+      {
+        "agilityMin": 14,
+        "agilityMax": 16,
+        "tickSpeed": 12
+      },
+      {
+        "agilityMin": 17,
+        "agilityMax": 20,
+        "tickSpeed": 11
+      },
+      {
+        "agilityMin": 21,
+        "agilityMax": 30,
+        "tickSpeed": 10
+      },
+      {
+        "agilityMin": 31,
+        "agilityMax": 43,
+        "tickSpeed": 9
+      },
+      {
+        "agilityMin": 44,
+        "agilityMax": 61,
+        "tickSpeed": 8
+      },
+      {
+        "agilityMin": 62,
+        "agilityMax": 88,
+        "tickSpeed": 7
+      },
+      {
+        "agilityMin": 89,
+        "agilityMax": 127,
+        "tickSpeed": 6
+      },
+      {
+        "agilityMin": 128,
+        "agilityMax": 169,
+        "tickSpeed": 5
+      },
+      {
+        "agilityMin": 170,
+        "agilityMax": 200,
+        "tickSpeed": 4
+      },
+      {
+        "agilityMin": 201,
+        "agilityMax": 255,
+        "tickSpeed": 3
+      }
+    ]
+  }
+}

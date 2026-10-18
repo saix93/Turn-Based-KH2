@@ -1,0 +1,1536 @@
+{
+ "sheet": "enemyNames",
+ "about": "Display names of KH2's enemies and bosses by objectId (objentry +0), taken from OpenKh's object dictionary (docs/kh2/dictionary/obj.md). An enemy without its own row in units.json is named from here.",
+ "columns": [
+  "key",
+  "objectId",
+  "model",
+  "name"
+ ],
+ "rows": [
+  {
+   "key": "o1",
+   "objectId": 1,
+   "model": "M_EX060",
+   "name": "Fat Bandit"
+  },
+  {
+   "key": "o2",
+   "objectId": 2,
+   "model": "M_EX500",
+   "name": "Trick Ghost"
+  },
+  {
+   "key": "o3",
+   "objectId": 3,
+   "model": "M_EX510",
+   "name": "Rabid Dog"
+  },
+  {
+   "key": "o4",
+   "objectId": 4,
+   "model": "M_EX520",
+   "name": "Hook Bat"
+  },
+  {
+   "key": "o5",
+   "objectId": 5,
+   "model": "M_EX530",
+   "name": "Bookmaster"
+  },
+  {
+   "key": "o6",
+   "objectId": 6,
+   "model": "M_EX540",
+   "name": "Aeroplane"
+  },
+  {
+   "key": "o7",
+   "objectId": 7,
+   "model": "M_EX550",
+   "name": "Minute Bomb"
+  },
+  {
+   "key": "o8",
+   "objectId": 8,
+   "model": "M_EX560",
+   "name": "Hammer Frame"
+  },
+  {
+   "key": "o9",
+   "objectId": 9,
+   "model": "M_EX570",
+   "name": "Assault Rider"
+  },
+  {
+   "key": "o10",
+   "objectId": 10,
+   "model": "M_EX580",
+   "name": "Nightwalker"
+  },
+  {
+   "key": "o11",
+   "objectId": 11,
+   "model": "M_EX620",
+   "name": "Fortuneteller"
+  },
+  {
+   "key": "o12",
+   "objectId": 12,
+   "model": "M_EX630",
+   "name": "Luna Bandit"
+  },
+  {
+   "key": "o13",
+   "objectId": 13,
+   "model": "M_EX640",
+   "name": "Hot Rod"
+  },
+  {
+   "key": "o14",
+   "objectId": 14,
+   "model": "M_EX650",
+   "name": "Cannon Gun"
+  },
+  {
+   "key": "o15",
+   "objectId": 15,
+   "model": "M_EX670",
+   "name": "Living Bone"
+  },
+  {
+   "key": "o16",
+   "objectId": 16,
+   "model": "M_EX680",
+   "name": "Devastator"
+  },
+  {
+   "key": "o17",
+   "objectId": 17,
+   "model": "M_EX690",
+   "name": "Lance Soldier"
+  },
+  {
+   "key": "o18",
+   "objectId": 18,
+   "model": "M_EX700",
+   "name": "Mole Driller"
+  },
+  {
+   "key": "o19",
+   "objectId": 19,
+   "model": "M_EX720",
+   "name": "Shaman"
+  },
+  {
+   "key": "o20",
+   "objectId": 20,
+   "model": "M_EX780",
+   "name": "Aerial Knocker"
+  },
+  {
+   "key": "o21",
+   "objectId": 21,
+   "model": "B_MU100",
+   "name": "Shan-Yu"
+  },
+  {
+   "key": "o22",
+   "objectId": 22,
+   "model": "B_MU110",
+   "name": "Hayabusa (Shan-Yu's Falcon)"
+  },
+  {
+   "key": "o71",
+   "objectId": 71,
+   "model": "M_EX110",
+   "name": "Silver Rock"
+  },
+  {
+   "key": "o72",
+   "objectId": 72,
+   "model": "M_EX120",
+   "name": "Emerald Blues"
+  },
+  {
+   "key": "o73",
+   "objectId": 73,
+   "model": "M_EX130",
+   "name": "Crimson Jazz"
+  },
+  {
+   "key": "o74",
+   "objectId": 74,
+   "model": "M_EX210",
+   "name": "Air Pirate"
+  },
+  {
+   "key": "o75",
+   "objectId": 75,
+   "model": "M_EX590",
+   "name": "Bulky Vendor"
+  },
+  {
+   "key": "o76",
+   "objectId": 76,
+   "model": "M_AL020_FIRE",
+   "name": "Fiery Globe"
+  },
+  {
+   "key": "o77",
+   "objectId": 77,
+   "model": "M_AL020_ICEE",
+   "name": "Icy Cube"
+  },
+  {
+   "key": "o81",
+   "objectId": 81,
+   "model": "B_EX110",
+   "name": "Axel (Twilight Town, 2nd fight)"
+  },
+  {
+   "key": "o118",
+   "objectId": 118,
+   "model": "M_EX200",
+   "name": "Wight Knight"
+  },
+  {
+   "key": "o119",
+   "objectId": 119,
+   "model": "M_EX200_NM",
+   "name": "Wight Knight (NM)"
+  },
+  {
+   "key": "o120",
+   "objectId": 120,
+   "model": "M_EX420",
+   "name": "Neoshadow"
+  },
+  {
+   "key": "o121",
+   "objectId": 121,
+   "model": "M_EX600",
+   "name": "Magnum Loader"
+  },
+  {
+   "key": "o122",
+   "objectId": 122,
+   "model": "M_EX710",
+   "name": "Morning Star"
+  },
+  {
+   "key": "o123",
+   "objectId": 123,
+   "model": "M_EX730",
+   "name": "Tornado Step"
+  },
+  {
+   "key": "o124",
+   "objectId": 124,
+   "model": "M_EX740",
+   "name": "Crescendo"
+  },
+  {
+   "key": "o125",
+   "objectId": 125,
+   "model": "M_EX750",
+   "name": "Creeper Plant"
+  },
+  {
+   "key": "o126",
+   "objectId": 126,
+   "model": "B_NM000",
+   "name": "Oogie Boogie"
+  },
+  {
+   "key": "o142",
+   "objectId": 142,
+   "model": "M_EX090_MATSU",
+   "name": "Bandit (MATSU)"
+  },
+  {
+   "key": "o218",
+   "objectId": 218,
+   "model": "M_EX310_NPC",
+   "name": "Behemoth (NPC)"
+  },
+  {
+   "key": "o219",
+   "objectId": 219,
+   "model": "M_EX320_NPC",
+   "name": "Wyvern (NPC)"
+  },
+  {
+   "key": "o220",
+   "objectId": 220,
+   "model": "M_EX760_NPC",
+   "name": "Armored Knight (NPC)"
+  },
+  {
+   "key": "o221",
+   "objectId": 221,
+   "model": "M_EX770_NPC",
+   "name": "Surveillance Robot (NPC)"
+  },
+  {
+   "key": "o298",
+   "objectId": 298,
+   "model": "B_HE030_NPC_QSATO",
+   "name": "Hades (NPC_QSATO) (HE)"
+  },
+  {
+   "key": "o301",
+   "objectId": 301,
+   "model": "M_EX010",
+   "name": "Soldier"
+  },
+  {
+   "key": "o302",
+   "objectId": 302,
+   "model": "M_EX020",
+   "name": "Shadow"
+  },
+  {
+   "key": "o303",
+   "objectId": 303,
+   "model": "M_EX050",
+   "name": "Large Body"
+  },
+  {
+   "key": "o304",
+   "objectId": 304,
+   "model": "M_EX660",
+   "name": "Rapid Thruster"
+  },
+  {
+   "key": "o305",
+   "objectId": 305,
+   "model": "M_EX760",
+   "name": "Armored Knight"
+  },
+  {
+   "key": "o306",
+   "objectId": 306,
+   "model": "M_EX770",
+   "name": "Surveillance Robot"
+  },
+  {
+   "key": "o307",
+   "objectId": 307,
+   "model": "B_EX100",
+   "name": "Twilight Thorn"
+  },
+  {
+   "key": "o308",
+   "objectId": 308,
+   "model": "M_EX890",
+   "name": "Dragoon"
+  },
+  {
+   "key": "o309",
+   "objectId": 309,
+   "model": "M_EX900",
+   "name": "Assassin"
+  },
+  {
+   "key": "o310",
+   "objectId": 310,
+   "model": "M_EX910",
+   "name": "Samurai"
+  },
+  {
+   "key": "o311",
+   "objectId": 311,
+   "model": "M_EX920",
+   "name": "Sniper"
+  },
+  {
+   "key": "o312",
+   "objectId": 312,
+   "model": "M_EX930",
+   "name": "Dancer"
+  },
+  {
+   "key": "o313",
+   "objectId": 313,
+   "model": "M_EX940",
+   "name": "Berserker"
+  },
+  {
+   "key": "o314",
+   "objectId": 314,
+   "model": "M_EX950",
+   "name": "Gambler"
+  },
+  {
+   "key": "o315",
+   "objectId": 315,
+   "model": "M_EX960",
+   "name": "Sorcerer"
+  },
+  {
+   "key": "o316",
+   "objectId": 316,
+   "model": "M_EX870",
+   "name": "Sorcerer v2 - Cubes?"
+  },
+  {
+   "key": "o317",
+   "objectId": 317,
+   "model": "M_EX880",
+   "name": "Creeper"
+  },
+  {
+   "key": "o318",
+   "objectId": 318,
+   "model": "M_EX990",
+   "name": "Dusk"
+  },
+  {
+   "key": "o348",
+   "objectId": 348,
+   "model": "B_AL020",
+   "name": "Jafar (Djinn)"
+  },
+  {
+   "key": "o349",
+   "objectId": 349,
+   "model": "B_HE030_PART",
+   "name": "Hades (1st & 2nd fight)"
+  },
+  {
+   "key": "o350",
+   "objectId": 350,
+   "model": "B_HE030",
+   "name": "Hades (3rd & Paradox Hades Cup fight)"
+  },
+  {
+   "key": "o351",
+   "objectId": 351,
+   "model": "B_HE020",
+   "name": "Cerberus"
+  },
+  {
+   "key": "o352",
+   "objectId": 352,
+   "model": "B_HE100",
+   "name": "Hydra"
+  },
+  {
+   "key": "o353",
+   "objectId": 353,
+   "model": "B_BB100",
+   "name": "Thresholder"
+  },
+  {
+   "key": "o354",
+   "objectId": 354,
+   "model": "B_BB110",
+   "name": "Dark Thorn"
+  },
+  {
+   "key": "o355",
+   "objectId": 355,
+   "model": "B_BB120",
+   "name": "Shadow Stalker"
+  },
+  {
+   "key": "o356",
+   "objectId": 356,
+   "model": "B_BB130",
+   "name": "Thresholder's possessor?"
+  },
+  {
+   "key": "o357",
+   "objectId": 357,
+   "model": "B_MU120",
+   "name": "Storm Rider"
+  },
+  {
+   "key": "o358",
+   "objectId": 358,
+   "model": "B_CA000",
+   "name": "Illuminator"
+  },
+  {
+   "key": "o367",
+   "objectId": 367,
+   "model": "M_BB010_SWORD",
+   "name": "Gargoyle Knight"
+  },
+  {
+   "key": "o368",
+   "objectId": 368,
+   "model": "M_BB010_AX",
+   "name": "Gargoyle Warrior"
+  },
+  {
+   "key": "o400",
+   "objectId": 400,
+   "model": "B_BB100_TSURU",
+   "name": "Thresholder Door (Stone) (TSURU)"
+  },
+  {
+   "key": "o665",
+   "objectId": 665,
+   "model": "B_LK100_00",
+   "name": "Shenzi"
+  },
+  {
+   "key": "o666",
+   "objectId": 666,
+   "model": "B_LK100_10",
+   "name": "Banzai"
+  },
+  {
+   "key": "o667",
+   "objectId": 667,
+   "model": "B_LK100_20",
+   "name": "Ed"
+  },
+  {
+   "key": "o668",
+   "objectId": 668,
+   "model": "B_LK110",
+   "name": "Scar"
+  },
+  {
+   "key": "o721",
+   "objectId": 721,
+   "model": "B_MU130",
+   "name": "??? - Barriers from Storm Rider?"
+  },
+  {
+   "key": "o795",
+   "objectId": 795,
+   "model": "B_EX120",
+   "name": "Demyx (Only playing sitar?)"
+  },
+  {
+   "key": "o865",
+   "objectId": 865,
+   "model": "B_EX200",
+   "name": "Twilight Thorn's Energy Ball (Break Raid RC)"
+  },
+  {
+   "key": "o922",
+   "objectId": 922,
+   "model": "B_HE110",
+   "name": "Hydra head (Out of the ground)"
+  },
+  {
+   "key": "o997",
+   "objectId": 997,
+   "model": "B_EX130",
+   "name": "Xaldin"
+  },
+  {
+   "key": "o1015",
+   "objectId": 1015,
+   "model": "B_CA010",
+   "name": "Barbossa"
+  },
+  {
+   "key": "o1035",
+   "objectId": 1035,
+   "model": "B_AL100_FIRE",
+   "name": "Volcanic Lord"
+  },
+  {
+   "key": "o1036",
+   "objectId": 1036,
+   "model": "B_AL100_ICE",
+   "name": "Blizzard Lord"
+  },
+  {
+   "key": "o1107",
+   "objectId": 1107,
+   "model": "B_CA020",
+   "name": "Undead Pirate A"
+  },
+  {
+   "key": "o1108",
+   "objectId": 1108,
+   "model": "B_CA030",
+   "name": "Undead Pirate B"
+  },
+  {
+   "key": "o1109",
+   "objectId": 1109,
+   "model": "B_CA040",
+   "name": "Undead Pirate C"
+  },
+  {
+   "key": "o1113",
+   "objectId": 1113,
+   "model": "B_LK120",
+   "name": "Groundshaker"
+  },
+  {
+   "key": "o1114",
+   "objectId": 1114,
+   "model": "M_EX610",
+   "name": "Strafer"
+  },
+  {
+   "key": "o1184",
+   "objectId": 1184,
+   "model": "M_EX880_DANCER",
+   "name": "Demyx's water form"
+  },
+  {
+   "key": "o1208",
+   "objectId": 1208,
+   "model": "B_TR000",
+   "name": "Hostile Program"
+  },
+  {
+   "key": "o1220",
+   "objectId": 1220,
+   "model": "M_EX020_NM",
+   "name": "Shadow (NM)"
+  },
+  {
+   "key": "o1248",
+   "objectId": 1248,
+   "model": "B_CA020_HUM_OKA",
+   "name": "Undead Pirate A (Human) (OKA)"
+  },
+  {
+   "key": "o1254",
+   "objectId": 1254,
+   "model": "B_CA020_SKL_OKA",
+   "name": "Undead Pirate A (Skeleton) (OKA)"
+  },
+  {
+   "key": "o1255",
+   "objectId": 1255,
+   "model": "B_CA030_HUM_OKA",
+   "name": "Undead Pirate B (Human) (OKA)"
+  },
+  {
+   "key": "o1256",
+   "objectId": 1256,
+   "model": "B_CA030_SKL_OKA",
+   "name": "Undead Pirate B (Skeleton) (OKA)"
+  },
+  {
+   "key": "o1257",
+   "objectId": 1257,
+   "model": "B_CA040_HUM_OKA",
+   "name": "Undead Pirate C (Human) (OKA)"
+  },
+  {
+   "key": "o1258",
+   "objectId": 1258,
+   "model": "B_CA040_SKL_OKA",
+   "name": "Undead Pirate C (Skeleton) (OKA)"
+  },
+  {
+   "key": "o1356",
+   "objectId": 1356,
+   "model": "B_MU100_HOOD",
+   "name": "Shan-Yu (HOOD) (MU)"
+  },
+  {
+   "key": "o1365",
+   "objectId": 1365,
+   "model": "M_EX020_RAW",
+   "name": "Shadow (RAW)"
+  },
+  {
+   "key": "o1366",
+   "objectId": 1366,
+   "model": "M_EX760_CROWD",
+   "name": "Armored Knight (CROWD)"
+  },
+  {
+   "key": "o1367",
+   "objectId": 1367,
+   "model": "M_EX660_CROWD",
+   "name": "Rapid Thruster (CROWD)"
+  },
+  {
+   "key": "o1368",
+   "objectId": 1368,
+   "model": "M_EX660_RAW",
+   "name": "Rapid Thruster (RAW)"
+  },
+  {
+   "key": "o1468",
+   "objectId": 1468,
+   "model": "M_EX760_RAW",
+   "name": "Armored Knight (RAW) (1000 battle)"
+  },
+  {
+   "key": "o1469",
+   "objectId": 1469,
+   "model": "M_EX770_RAW",
+   "name": "Surveillance Robot (RAW) (1000 battle)"
+  },
+  {
+   "key": "o1474",
+   "objectId": 1474,
+   "model": "B_HE000_ISHI",
+   "name": "Giant Rock Titan (Dummy)"
+  },
+  {
+   "key": "o1486",
+   "objectId": 1486,
+   "model": "B_NM100",
+   "name": "Prison Keeper"
+  },
+  {
+   "key": "o1488",
+   "objectId": 1488,
+   "model": "B_NM110",
+   "name": "The Experiment"
+  },
+  {
+   "key": "o1528",
+   "objectId": 1528,
+   "model": "B_EX150",
+   "name": "Luxord (WORKS! can't be killed, or paused)"
+  },
+  {
+   "key": "o1535",
+   "objectId": 1535,
+   "model": "B_EX210",
+   "name": "Luxord's card (attack)"
+  },
+  {
+   "key": "o1537",
+   "objectId": 1537,
+   "model": "M_EX950_CARD",
+   "name": "Sora (Gambler's card)"
+  },
+  {
+   "key": "o1538",
+   "objectId": 1538,
+   "model": "M_EX950_DICE",
+   "name": "Sora (Gambler's die)"
+  },
+  {
+   "key": "o1542",
+   "objectId": 1542,
+   "model": "M_EX990_RTN",
+   "name": "Dusk (RTN)"
+  },
+  {
+   "key": "o1543",
+   "objectId": 1543,
+   "model": "B_CA050",
+   "name": "Grim Reaper"
+  },
+  {
+   "key": "o1570",
+   "objectId": 1570,
+   "model": "B_EX140",
+   "name": "Xigbar"
+  },
+  {
+   "key": "o1574",
+   "objectId": 1574,
+   "model": "M_EX660_E_CROWD",
+   "name": "Rapid Thruster (E_CROWD)"
+  },
+  {
+   "key": "o1575",
+   "objectId": 1575,
+   "model": "M_EX800",
+   "name": "Bolt Tower"
+  },
+  {
+   "key": "o1576",
+   "objectId": 1576,
+   "model": "M_EX800_RAW",
+   "name": "Bolt Tower (RAW)"
+  },
+  {
+   "key": "o1578",
+   "objectId": 1578,
+   "model": "B_AL100_1ST",
+   "name": "Volcano Lord"
+  },
+  {
+   "key": "o1579",
+   "objectId": 1579,
+   "model": "B_AL100_2ND",
+   "name": "Blizzard Lord"
+  },
+  {
+   "key": "o1606",
+   "objectId": 1606,
+   "model": "B_EX170",
+   "name": "Xemnas"
+  },
+  {
+   "key": "o1670",
+   "objectId": 1670,
+   "model": "M_AL020_FIRE_RAW",
+   "name": "Fiery Globe (RAW)"
+  },
+  {
+   "key": "o1671",
+   "objectId": 1671,
+   "model": "M_AL020_ICEE_RAW",
+   "name": "Icy Cube (RAW)"
+  },
+  {
+   "key": "o1673",
+   "objectId": 1673,
+   "model": "M_AL020_FIRE2",
+   "name": "Fiery Globe (2)"
+  },
+  {
+   "key": "o1674",
+   "objectId": 1674,
+   "model": "M_AL020_ICEE2",
+   "name": "Icy Cube (2)"
+  },
+  {
+   "key": "o1675",
+   "objectId": 1675,
+   "model": "M_EX600_LC",
+   "name": "Magnum Loader (white)"
+  },
+  {
+   "key": "o1717",
+   "objectId": 1717,
+   "model": "M_EX600_LC_ATK",
+   "name": "Magnum Loader (blue)"
+  },
+  {
+   "key": "o1718",
+   "objectId": 1718,
+   "model": "M_EX600_LC_CHG",
+   "name": "Magnum Loader (yellow)"
+  },
+  {
+   "key": "o1719",
+   "objectId": 1719,
+   "model": "M_EX600_LC_GRD",
+   "name": "Magnum Loader (green)"
+  },
+  {
+   "key": "o1727",
+   "objectId": 1727,
+   "model": "M_EX850",
+   "name": "Berserker weapon (Useable)"
+  },
+  {
+   "key": "o1728",
+   "objectId": 1728,
+   "model": "M_EX860",
+   "name": "Sora Die"
+  },
+  {
+   "key": "o1737",
+   "objectId": 1737,
+   "model": "B_EX160",
+   "name": "Saïx"
+  },
+  {
+   "key": "o1760",
+   "objectId": 1760,
+   "model": "M_EX620_AL",
+   "name": "Fortuneteller (AL)"
+  },
+  {
+   "key": "o1762",
+   "objectId": 1762,
+   "model": "B_TR020",
+   "name": "MCP"
+  },
+  {
+   "key": "o1774",
+   "objectId": 1774,
+   "model": "M_EX790_HALLOWEEN",
+   "name": "Graveyard"
+  },
+  {
+   "key": "o1775",
+   "objectId": 1775,
+   "model": "M_EX790_HALLOWEEN_NM",
+   "name": "Graveyard (NM)"
+  },
+  {
+   "key": "o1776",
+   "objectId": 1776,
+   "model": "M_EX790_CHRISTMAS",
+   "name": "Toy Soldier"
+  },
+  {
+   "key": "o1777",
+   "objectId": 1777,
+   "model": "M_EX790_CHRISTMAS_NM",
+   "name": "Toy Soldier (NM)"
+  },
+  {
+   "key": "o1808",
+   "objectId": 1808,
+   "model": "B_NM110_HEAD",
+   "name": "The Experiment (Head)"
+  },
+  {
+   "key": "o1809",
+   "objectId": 1809,
+   "model": "B_NM110_L_ARM",
+   "name": "The Experiment (Left Hand)"
+  },
+  {
+   "key": "o1810",
+   "objectId": 1810,
+   "model": "B_NM110_R_ARM",
+   "name": "The Experiment (Right Hand)"
+  },
+  {
+   "key": "o1821",
+   "objectId": 1821,
+   "model": "M_EX800_CROWD",
+   "name": "Bolt Tower (CROWD)"
+  },
+  {
+   "key": "o1827",
+   "objectId": 1827,
+   "model": "M_EX500_NM",
+   "name": "Trick Ghost (NM)"
+  },
+  {
+   "key": "o1828",
+   "objectId": 1828,
+   "model": "M_EX540_WI",
+   "name": "Aeroplane (WI)"
+  },
+  {
+   "key": "o1829",
+   "objectId": 1829,
+   "model": "M_EX550_WI",
+   "name": "Minute Bomb (WI)"
+  },
+  {
+   "key": "o1830",
+   "objectId": 1830,
+   "model": "M_EX560_WI",
+   "name": "Hammer Frame (WI)"
+  },
+  {
+   "key": "o1831",
+   "objectId": 1831,
+   "model": "M_EX640_WI",
+   "name": "Hot Rod (WI)"
+  },
+  {
+   "key": "o1832",
+   "objectId": 1832,
+   "model": "M_EX650_TR",
+   "name": "Cannon Gun (TR)"
+  },
+  {
+   "key": "o1833",
+   "objectId": 1833,
+   "model": "M_EX700_NM",
+   "name": "Mole Driller (NM)"
+  },
+  {
+   "key": "o1834",
+   "objectId": 1834,
+   "model": "M_EX120_NM",
+   "name": "Emerald Blues (NM)"
+  },
+  {
+   "key": "o1835",
+   "objectId": 1835,
+   "model": "M_EX530_TR",
+   "name": "Bookmaster (TR)"
+  },
+  {
+   "key": "o1836",
+   "objectId": 1836,
+   "model": "M_EX420_NM",
+   "name": "Neoshadow (NM)"
+  },
+  {
+   "key": "o1837",
+   "objectId": 1837,
+   "model": "M_EX750_NM",
+   "name": "Creeper Plant (NM)"
+  },
+  {
+   "key": "o1838",
+   "objectId": 1838,
+   "model": "M_EX010_NM",
+   "name": "Soldier (NM)"
+  },
+  {
+   "key": "o1839",
+   "objectId": 1839,
+   "model": "M_EX010_TR",
+   "name": "Soldier (TR)"
+  },
+  {
+   "key": "o1840",
+   "objectId": 1840,
+   "model": "M_EX020_WI",
+   "name": "Shadow (WI)"
+  },
+  {
+   "key": "o1841",
+   "objectId": 1841,
+   "model": "M_EX020_NM_RAW",
+   "name": "Shadow (NM) (RAW)"
+  },
+  {
+   "key": "o1842",
+   "objectId": 1842,
+   "model": "M_EX020_WI_RAW",
+   "name": "Shadow (WI) (RAW)"
+  },
+  {
+   "key": "o1843",
+   "objectId": 1843,
+   "model": "M_EX660_WI",
+   "name": "Rapid Thruster (WI)"
+  },
+  {
+   "key": "o1845",
+   "objectId": 1845,
+   "model": "M_EX760_NM",
+   "name": "Armored Knight (NM)"
+  },
+  {
+   "key": "o1847",
+   "objectId": 1847,
+   "model": "M_EX770_TR",
+   "name": "Surveillance Robot (TR)"
+  },
+  {
+   "key": "o1849",
+   "objectId": 1849,
+   "model": "M_EX010_WI",
+   "name": "Soldier (WI)"
+  },
+  {
+   "key": "o1852",
+   "objectId": 1852,
+   "model": "M_EX120_TR",
+   "name": "Emerald Blues (TR)"
+  },
+  {
+   "key": "o1866",
+   "objectId": 1866,
+   "model": "M_EX800_E_CROWD",
+   "name": "Bolt Tower (E_CROWD)"
+  },
+  {
+   "key": "o1875",
+   "objectId": 1875,
+   "model": "M_EX610_RAW",
+   "name": "Strafer (RAW)"
+  },
+  {
+   "key": "o1887",
+   "objectId": 1887,
+   "model": "M_EX520_AL",
+   "name": "Hook Bat (AL)"
+  },
+  {
+   "key": "o1888",
+   "objectId": 1888,
+   "model": "M_EX130_AL",
+   "name": "Crimson Jazz (AL)"
+  },
+  {
+   "key": "o1889",
+   "objectId": 1889,
+   "model": "M_EX660_AL",
+   "name": "Rapid Thruster (AL)"
+  },
+  {
+   "key": "o2025",
+   "objectId": 2025,
+   "model": "M_EX050_WI",
+   "name": "Large Body (WI)"
+  },
+  {
+   "key": "o2043",
+   "objectId": 2043,
+   "model": "B_AL110",
+   "name": "Volcanic Lord's lava pool"
+  },
+  {
+   "key": "o2044",
+   "objectId": 2044,
+   "model": "B_AL120",
+   "name": "Blizzard Lord's ice spikes"
+  },
+  {
+   "key": "o2066",
+   "objectId": 2066,
+   "model": "B_HE030_HE05",
+   "name": "Hades"
+  },
+  {
+   "key": "o2076",
+   "objectId": 2076,
+   "model": "M_EX790",
+   "name": "Graveyard"
+  },
+  {
+   "key": "o2079",
+   "objectId": 2079,
+   "model": "B_EX170_LAST",
+   "name": "Xemnas (Final)"
+  },
+  {
+   "key": "o2099",
+   "objectId": 2099,
+   "model": "B_LK110_PHANTOM",
+   "name": "Scar Ghost"
+  },
+  {
+   "key": "o2119",
+   "objectId": 2119,
+   "model": "B_LK100",
+   "name": "Shenzi"
+  },
+  {
+   "key": "o2124",
+   "objectId": 2124,
+   "model": "B_EX110_RTN",
+   "name": "Axel (Scene day he freezes) (RTN)"
+  },
+  {
+   "key": "o2125",
+   "objectId": 2125,
+   "model": "B_EX170_RTN",
+   "name": "Xehanort (Scene looking at Kingdom Hearts) (RTN)"
+  },
+  {
+   "key": "o2140",
+   "objectId": 2140,
+   "model": "B_EX260",
+   "name": "Xemnas (Armor)"
+  },
+  {
+   "key": "o2184",
+   "objectId": 2184,
+   "model": "M_EX500_GM",
+   "name": "Trick Ghost (GM)"
+  },
+  {
+   "key": "o2185",
+   "objectId": 2185,
+   "model": "M_EX790_GM",
+   "name": "Graveyard (GM)"
+  },
+  {
+   "key": "o2186",
+   "objectId": 2186,
+   "model": "B_BB100_GM",
+   "name": "Thresholder (Includes archway) (GM)"
+  },
+  {
+   "key": "o2187",
+   "objectId": 2187,
+   "model": "B_BB130_GM",
+   "name": "Possessor (GM)"
+  },
+  {
+   "key": "o2188",
+   "objectId": 2188,
+   "model": "B_BB120_GM",
+   "name": "Shadow Stalker (GM)"
+  },
+  {
+   "key": "o2224",
+   "objectId": 2224,
+   "model": "B_EX230",
+   "name": "??? - Game acts as if an enemy is present"
+  },
+  {
+   "key": "o2226",
+   "objectId": 2226,
+   "model": "B_EX350",
+   "name": "Large platform from TWTNW with pink spike"
+  },
+  {
+   "key": "o2229",
+   "objectId": 2229,
+   "model": "B_EX110_SKIRMISH",
+   "name": "Axel (boss, freezes when RC is used) (SKIRMISH) (EX)"
+  },
+  {
+   "key": "o2238",
+   "objectId": 2238,
+   "model": "M_EX800_MU",
+   "name": "Bolt Tower (MU)"
+  },
+  {
+   "key": "o2239",
+   "objectId": 2239,
+   "model": "M_EX800_MU_RAW",
+   "name": "Bolt Tower (MU) (RAW)"
+  },
+  {
+   "key": "o2251",
+   "objectId": 2251,
+   "model": "M_EX990_E_CROWD",
+   "name": "Dusk (E_CROWD)"
+  },
+  {
+   "key": "o2265",
+   "objectId": 2265,
+   "model": "B_AL100_FIRE_GM",
+   "name": "Volcano Lord (GM)"
+  },
+  {
+   "key": "o2266",
+   "objectId": 2266,
+   "model": "B_AL100_ICE_GM",
+   "name": "Blizzard Lord (GM)"
+  },
+  {
+   "key": "o2267",
+   "objectId": 2267,
+   "model": "B_CA050_GM",
+   "name": "Grim Reaper (GM)"
+  },
+  {
+   "key": "o2268",
+   "objectId": 2268,
+   "model": "B_NM100_GM",
+   "name": "Prison Keeper (GM)"
+  },
+  {
+   "key": "o2269",
+   "objectId": 2269,
+   "model": "B_MU120_GM",
+   "name": "Storm Rider (GM)"
+  },
+  {
+   "key": "o2270",
+   "objectId": 2270,
+   "model": "B_EX140_GM",
+   "name": "Xigbar (GM)"
+  },
+  {
+   "key": "o2271",
+   "objectId": 2271,
+   "model": "B_EX160_GM",
+   "name": "Saïx (GM)"
+  },
+  {
+   "key": "o2272",
+   "objectId": 2272,
+   "model": "B_HE020_GM",
+   "name": "Cerberus (GM)"
+  },
+  {
+   "key": "o2273",
+   "objectId": 2273,
+   "model": "B_HE030_GM",
+   "name": "Hades (GM)"
+  },
+  {
+   "key": "o2274",
+   "objectId": 2274,
+   "model": "B_HE100_GM",
+   "name": "Hydra (GM)"
+  },
+  {
+   "key": "o2275",
+   "objectId": 2275,
+   "model": "B_NM110_GM",
+   "name": "The Experiment (GM)"
+  },
+  {
+   "key": "o2277",
+   "objectId": 2277,
+   "model": "B_CA010_HUM_GM",
+   "name": "Barbosa (Human) (GM)"
+  },
+  {
+   "key": "o2278",
+   "objectId": 2278,
+   "model": "B_EX130_GM",
+   "name": "Xaldin (GM)"
+  },
+  {
+   "key": "o2280",
+   "objectId": 2280,
+   "model": "B_EX110_GM",
+   "name": "Axel (GM)"
+  },
+  {
+   "key": "o2281",
+   "objectId": 2281,
+   "model": "B_EX120_GM",
+   "name": "Demyx (GM)"
+  },
+  {
+   "key": "o2286",
+   "objectId": 2286,
+   "model": "B_EX210_EH",
+   "name": "Luxord's card (time?) (EX)"
+  },
+  {
+   "key": "o2288",
+   "objectId": 2288,
+   "model": "M_EX800_DC",
+   "name": "Bolt Tower (DC)"
+  },
+  {
+   "key": "o2294",
+   "objectId": 2294,
+   "model": "M_EX880_DANCER_EH",
+   "name": "Demyx's water form (EH)"
+  },
+  {
+   "key": "o2295",
+   "objectId": 2295,
+   "model": "B_EX120_HB",
+   "name": "Demyx"
+  },
+  {
+   "key": "o2318",
+   "objectId": 2318,
+   "model": "B_HE030_CLSM",
+   "name": "Hades (CLSM) (HE)"
+  },
+  {
+   "key": "o2322",
+   "objectId": 2322,
+   "model": "B_EX360",
+   "name": "??? - Invisible enemy, can't be hurt. (EX)"
+  },
+  {
+   "key": "o2336",
+   "objectId": 2336,
+   "model": "B_MU100_GM",
+   "name": "Shan Yu (GM) (MU)"
+  },
+  {
+   "key": "o2337",
+   "objectId": 2337,
+   "model": "B_TR000_GM",
+   "name": "Hostile Program (GM) (TR)"
+  },
+  {
+   "key": "o2338",
+   "objectId": 2338,
+   "model": "M_EX990_RTN_FIXCOLOR",
+   "name": "Dusk (RTN) (FIXCOLOR) (EX)"
+  },
+  {
+   "key": "o2342",
+   "objectId": 2342,
+   "model": "M_EX350_01",
+   "name": "Mushroom 1 (EX)"
+  },
+  {
+   "key": "o2343",
+   "objectId": 2343,
+   "model": "M_EX350_02",
+   "name": "Mushroom 2 (EX)"
+  },
+  {
+   "key": "o2344",
+   "objectId": 2344,
+   "model": "M_EX350_03",
+   "name": "Mushroom 3 (EX)"
+  },
+  {
+   "key": "o2345",
+   "objectId": 2345,
+   "model": "M_EX350_04",
+   "name": "Mushroom 4 (EX)"
+  },
+  {
+   "key": "o2346",
+   "objectId": 2346,
+   "model": "M_EX350_05",
+   "name": "Mushroom 5 (EX)"
+  },
+  {
+   "key": "o2347",
+   "objectId": 2347,
+   "model": "M_EX350_06",
+   "name": "Mushroom 6 (EX)"
+  },
+  {
+   "key": "o2348",
+   "objectId": 2348,
+   "model": "M_EX350_07",
+   "name": "Mushroom 7 (EX)"
+  },
+  {
+   "key": "o2349",
+   "objectId": 2349,
+   "model": "M_EX350_08",
+   "name": "Mushroom 8 (EX)"
+  },
+  {
+   "key": "o2350",
+   "objectId": 2350,
+   "model": "M_EX350_09",
+   "name": "Mushroom 9 (EX)"
+  },
+  {
+   "key": "o2351",
+   "objectId": 2351,
+   "model": "M_EX350_10",
+   "name": "Mushroom 10 (EX)"
+  },
+  {
+   "key": "o2352",
+   "objectId": 2352,
+   "model": "M_EX350_11",
+   "name": "Mushroom 11 (EX)"
+  },
+  {
+   "key": "o2353",
+   "objectId": 2353,
+   "model": "M_EX350_12",
+   "name": "Mushroom 12 (EX)"
+  },
+  {
+   "key": "o2354",
+   "objectId": 2354,
+   "model": "M_EX350_13",
+   "name": "Mushroom 13 (EX)"
+  },
+  {
+   "key": "o2385",
+   "objectId": 2385,
+   "model": "B_EX390",
+   "name": "Hooded Roxas"
+  },
+  {
+   "key": "o2402",
+   "objectId": 2402,
+   "model": "B_EX400",
+   "name": "Larxene (Absent Silhouette)"
+  },
+  {
+   "key": "o2403",
+   "objectId": 2403,
+   "model": "M_EX500_HB",
+   "name": "Magic Phantom"
+  },
+  {
+   "key": "o2404",
+   "objectId": 2404,
+   "model": "M_EX520_HB",
+   "name": "Beffudler"
+  },
+  {
+   "key": "o2405",
+   "objectId": 2405,
+   "model": "M_EX560_HB",
+   "name": "Iron Hammer"
+  },
+  {
+   "key": "o2406",
+   "objectId": 2406,
+   "model": "M_EX640_HB",
+   "name": "Mad Ride"
+  },
+  {
+   "key": "o2407",
+   "objectId": 2407,
+   "model": "M_EX650_HB",
+   "name": "Camo Cannon"
+  },
+  {
+   "key": "o2408",
+   "objectId": 2408,
+   "model": "M_EX680_HB",
+   "name": "Reckless"
+  },
+  {
+   "key": "o2409",
+   "objectId": 2409,
+   "model": "M_EX690_HB",
+   "name": "Lance Warrior"
+  },
+  {
+   "key": "o2410",
+   "objectId": 2410,
+   "model": "M_EX780_HB",
+   "name": "Aeriel Champ"
+  },
+  {
+   "key": "o2411",
+   "objectId": 2411,
+   "model": "M_EX720_HB",
+   "name": "Necromancer"
+  },
+  {
+   "key": "o2412",
+   "objectId": 2412,
+   "model": "M_EX120_HB",
+   "name": "Spring Metal"
+  },
+  {
+   "key": "o2413",
+   "objectId": 2413,
+   "model": "M_EX210_HB",
+   "name": "Aerial Viking"
+  },
+  {
+   "key": "o2414",
+   "objectId": 2414,
+   "model": "M_EX530_HB",
+   "name": "Runemaster"
+  },
+  {
+   "key": "o2415",
+   "objectId": 2415,
+   "model": "B_EX420",
+   "name": "Lingering Will"
+  },
+  {
+   "key": "o2427",
+   "objectId": 2427,
+   "model": "B_EX370",
+   "name": "Zexion (Absent Silhouette)"
+  },
+  {
+   "key": "o2428",
+   "objectId": 2428,
+   "model": "M_EX500_HB_GM",
+   "name": "Magic Phantom (GM)"
+  },
+  {
+   "key": "o2509",
+   "objectId": 2509,
+   "model": "M_EX590_NM",
+   "name": "Bulky Vendor (NM)"
+  },
+  {
+   "key": "o2539",
+   "objectId": 2539,
+   "model": "M_EX350_06_SU",
+   "name": "Mushroom 6 (SU)"
+  },
+  {
+   "key": "o2554",
+   "objectId": 2554,
+   "model": "M_EX880_DANCER_LV99",
+   "name": "Demyx's water form (Data)"
+  },
+  {
+   "key": "o2558",
+   "objectId": 2558,
+   "model": "M_EX350_02_GM",
+   "name": "Mushroom 2 (GM)"
+  },
+  {
+   "key": "o2559",
+   "objectId": 2559,
+   "model": "M_EX350_11_GM",
+   "name": "Mushroom 11 (GM)"
+  }
+ ]
+}

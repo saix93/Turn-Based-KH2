@@ -1,0 +1,86 @@
+{
+  "sheet": "items",
+  "about": "Battle items, used through KH2's own item commands so the animation, effect and healing are KH2's. Counts are KH2's inventory (SaveBase + saveOffset); if KH2 doesn't take the item itself, the mod takes one. hp/mp are the share of max HP/MP the item restores (party: everyone); the mod applies it itself when KH2's own use leaves HP and MP unchanged.",
+  "columns": [
+    "key",
+    "name",
+    "saveOffset",
+    "cmdId",
+    "hp",
+    "mp",
+    "party",
+    "description"
+  ],
+  "rows": [
+    {
+      "key": "potion",
+      "name": "Potion",
+      "saveOffset": "0x3580",
+      "cmdId": 23,
+      "description": "Restores a little HP.",
+      "hp": 0.33,
+      "mp": 0.0,
+      "party": false
+    },
+    {
+      "key": "hipotion",
+      "name": "Hi-Potion",
+      "saveOffset": "0x3581",
+      "cmdId": 20,
+      "description": "Restores HP.",
+      "hp": 0.66,
+      "mp": 0.0,
+      "party": false
+    },
+    {
+      "key": "megapotion",
+      "name": "Mega-Potion",
+      "saveOffset": "0x3584",
+      "cmdId": 242,
+      "description": "Restores HP to the whole party.",
+      "hp": 0.33,
+      "mp": 0.0,
+      "party": true
+    },
+    {
+      "key": "ether",
+      "name": "Ether",
+      "saveOffset": "0x3582",
+      "cmdId": 21,
+      "description": "Restores MP.",
+      "hp": 0.0,
+      "mp": 0.33,
+      "party": false
+    },
+    {
+      "key": "megaether",
+      "name": "Mega-Ether",
+      "saveOffset": "0x3585",
+      "cmdId": 243,
+      "description": "Restores MP to the whole party.",
+      "hp": 0.0,
+      "mp": 0.33,
+      "party": true
+    },
+    {
+      "key": "elixir",
+      "name": "Elixir",
+      "saveOffset": "0x3583",
+      "cmdId": 22,
+      "description": "Fully restores HP and MP.",
+      "hp": 1.0,
+      "mp": 1.0,
+      "party": false
+    },
+    {
+      "key": "megalixir",
+      "name": "Megalixir",
+      "saveOffset": "0x3586",
+      "cmdId": 244,
+      "description": "Fully restores the party's HP and MP.",
+      "hp": 1.0,
+      "mp": 1.0,
+      "party": true
+    }
+  ]
+}

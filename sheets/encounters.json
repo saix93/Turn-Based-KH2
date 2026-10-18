@@ -1,0 +1,180 @@
+{
+  "sheet": "encounters",
+  "about": "Random encounters, FFX style, with each world's own enemies. When a field room spawns its enemies, the mod takes them out of the world (frozen, far below the floor) into that room's encounter pool, so no enemy roams. Walking in a room with a pool fills a hidden danger meter (systems.encounterMeter*); when it fills, the screen shatters and a few of the pool's enemies line up in front of the party. A room whose own spawns hold no enemies (save points, towns) has an empty pool and never has encounters. Story and boss fights (KH2 battle type 2) are never pooled: they are taken over as turn-based battles. The arenas below are only used by Melty's test mode, to reach a room with enemies in the same world as the test save (Twilight Town: the Sandlot's Dusks; Olympus Coliseum: the Underworld room he17's Soldiers and Air Soldiers, an ambush group the player is placed in).",
+  "columns": [
+    "key",
+    "world",
+    "room",
+    "roomName",
+    "field",
+    "arena"
+  ],
+  "rows": [
+    {
+      "key": "tt03",
+      "world": 2,
+      "room": 3,
+      "roomName": "Back Alley",
+      "field": true,
+      "arena": "arena_backalley"
+    },
+    {
+      "key": "tt04",
+      "world": 2,
+      "room": 4,
+      "roomName": "Sandlot",
+      "field": true,
+      "arena": "arena_sandlot"
+    },
+    {
+      "key": "tt06",
+      "world": 2,
+      "room": 6,
+      "roomName": "Market Street: Station Heights",
+      "field": true,
+      "arena": "arena_sandlot"
+    },
+    {
+      "key": "tt07",
+      "world": 2,
+      "room": 7,
+      "roomName": "Market Street: Tram Common",
+      "field": true,
+      "arena": "arena_sandlot"
+    },
+    {
+      "key": "tt08",
+      "world": 2,
+      "room": 8,
+      "roomName": "Station Plaza",
+      "field": true,
+      "arena": "arena_plaza"
+    },
+    {
+      "key": "tt10",
+      "world": 2,
+      "room": 10,
+      "roomName": "Sunset Terrace",
+      "field": true,
+      "arena": "arena_backalley"
+    },
+    {
+      "key": "tt12",
+      "world": 2,
+      "room": 12,
+      "roomName": "Sunset Hill",
+      "field": true,
+      "arena": "arena_backalley"
+    },
+    {
+      "key": "tt13",
+      "world": 2,
+      "room": 13,
+      "roomName": "The Woods",
+      "field": true,
+      "arena": "arena_sandlot"
+    },
+    {
+      "key": "tt14",
+      "world": 2,
+      "room": 14,
+      "roomName": "The Old Mansion",
+      "field": true,
+      "arena": "arena_sandlot"
+    }
+  ],
+  "arenas": {
+    "columns": [
+      "key",
+      "world",
+      "room",
+      "btlProgram",
+      "door",
+      "foes",
+      "triggerX",
+      "triggerY",
+      "triggerZ"
+    ],
+    "rows": [
+      {
+        "key": "arena_backalley",
+        "world": 2,
+        "room": 3,
+        "btlProgram": 1,
+        "door": 0,
+        "foes": [
+          "dusk"
+        ],
+        "triggerX": 93.0,
+        "triggerY": -74.0,
+        "triggerZ": 853.0
+      },
+      {
+        "key": "arena_sandlot",
+        "world": 2,
+        "room": 4,
+        "btlProgram": 1,
+        "door": 0,
+        "foes": [
+          "dusk"
+        ],
+        "triggerX": -2.0,
+        "triggerY": 10.0,
+        "triggerZ": -18.0
+      },
+      {
+        "key": "arena_plaza",
+        "world": 2,
+        "room": 8,
+        "btlProgram": 7,
+        "door": 0,
+        "foes": [
+          "creeper"
+        ],
+        "triggerX": 20.0,
+        "triggerY": 0.0,
+        "triggerZ": 151.0
+      },
+      {
+        "key": "arena_underworld",
+        "world": 6,
+        "room": 17,
+        "btlProgram": 1,
+        "door": 0,
+        "foes": [
+          "trick_ghost",
+          "creeper_plant"
+        ],
+        "triggerX": 144.0,
+        "triggerY": 200.0,
+        "triggerZ": 2146.0
+      },
+      {
+        "key": "arena_underworld2",
+        "world": 6,
+        "room": 16,
+        "btlProgram": 1,
+        "door": 0,
+        "foes": [
+          "trick_ghost"
+        ],
+        "triggerX": -995.0,
+        "triggerY": -250.0,
+        "triggerZ": 4.0
+      },
+      {
+        "key": "arena_underworld3",
+        "world": 6,
+        "room": 15,
+        "btlProgram": 1,
+        "door": 0,
+        "foes": [
+          "trick_ghost"
+        ],
+        "triggerX": -1420.0,
+        "triggerY": 300.0,
+        "triggerZ": 395.0
+      }
+    ]
+  }
+}

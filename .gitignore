@@ -1,0 +1,16 @@
+# build output
+build/
+dist/
+*.exp
+*.lib
+*.obj
+*.pdb
+__pycache__/
+
+# reference repos cloned for research (not part of the mod)
+_ref/
+_old/
+
+# data dumped by the research tools
+tools/*.txt
+tools/*.tsv

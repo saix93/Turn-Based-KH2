@@ -1,0 +1,2544 @@
+{
+ "sheet": "battleMaps",
+ "about": "Where random encounters are fought: one open spot per room that has enemies (FFX-style battle maps). An encounter in a room is fought at that room's spot; test mode, starting in a room without enemies, travels to the nearest room of the same world that has one. Each row is a room and battle program whose own spawn group brings in that world's enemies, and a spot (spotX/Y/Z = the middle between the lines, dir = from the party toward the enemies) where the party line, the enemy line and the camera behind the party fit: found by tools/battlemaps.py against the room's collision (floor under every slot at one height, no wall within 110 units of any slot). trigger is the spawn group's centre: the player stands there for a moment so an ambush group appears. verified: seen in the game by a test run.",
+ "columns": [
+  "key",
+  "world",
+  "room",
+  "roomName",
+  "btlProgram",
+  "door",
+  "triggerX",
+  "triggerY",
+  "triggerZ",
+  "spotX",
+  "spotY",
+  "spotZ",
+  "dirX",
+  "dirZ",
+  "waves",
+  "foeIds",
+  "foeModels",
+  "verified"
+ ],
+ "rows": [
+  {
+   "key": "tt04_g225",
+   "world": 2,
+   "room": 4,
+   "roomName": "Sandlot",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -55,
+   "triggerY": 10,
+   "triggerZ": -76,
+   "spotX": -55,
+   "spotY": 10,
+   "spotZ": -76,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    318
+   ],
+   "foeModels": [
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt07_g1047",
+   "world": 2,
+   "room": 7,
+   "roomName": "Market Street: Tram Common",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": 2799,
+   "triggerY": -150,
+   "triggerZ": 3361,
+   "spotX": 2799,
+   "spotY": 0,
+   "spotZ": 3361,
+   "dirX": 0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    312,
+    318
+   ],
+   "foeModels": [
+    "M_EX930",
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt14_g743",
+   "world": 2,
+   "room": 14,
+   "roomName": "The Old Mansion",
+   "btlProgram": 4,
+   "door": 0,
+   "triggerX": -164,
+   "triggerY": 0,
+   "triggerZ": -2365,
+   "spotX": -164,
+   "spotY": 0,
+   "spotZ": -2365,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt15_g140",
+   "world": 2,
+   "room": 15,
+   "roomName": "Mansion: Foyer",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": -801,
+   "triggerY": -1100,
+   "triggerZ": 987,
+   "spotX": -801,
+   "spotY": -1200,
+   "spotZ": 987,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    314,
+    318
+   ],
+   "foeModels": [
+    "M_EX950",
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt19_g299",
+   "world": 2,
+   "room": 19,
+   "roomName": "Mansion: Basement Hall",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -28,
+   "triggerY": 0,
+   "triggerZ": 26,
+   "spotX": -28,
+   "spotY": 0,
+   "spotZ": 26,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    309
+   ],
+   "foeModels": [
+    "M_EX900"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt25_g112",
+   "world": 2,
+   "room": 25,
+   "roomName": "The Tower",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -2322,
+   "triggerY": -94,
+   "triggerZ": -1558,
+   "spotX": -2322,
+   "spotY": -94,
+   "spotZ": -1558,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt29_g197",
+   "world": 2,
+   "room": 29,
+   "roomName": "Tower: Star Chamber",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 11,
+   "triggerY": 0,
+   "triggerZ": 17,
+   "spotX": 11,
+   "spotY": 0,
+   "spotZ": 17,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt30_g199",
+   "world": 2,
+   "room": 30,
+   "roomName": "Tower: Moon Chamber",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 50,
+   "triggerY": -300,
+   "triggerZ": -50,
+   "spotX": 50,
+   "spotY": 0,
+   "spotZ": -50,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    301
+   ],
+   "foeModels": [
+    "M_EX010"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt36_g88",
+   "world": 2,
+   "room": 36,
+   "roomName": "Tunnelway",
+   "btlProgram": 4,
+   "door": 0,
+   "triggerX": -1056,
+   "triggerY": -1110,
+   "triggerZ": 670,
+   "spotX": -1056,
+   "spotY": -860,
+   "spotZ": 670,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    301
+   ],
+   "foeModels": [
+    "M_EX010"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt13_g80",
+   "world": 2,
+   "room": 13,
+   "roomName": "The Woods",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": 1411,
+   "triggerY": 0,
+   "triggerZ": 1193,
+   "spotX": 1411,
+   "spotY": 86,
+   "spotZ": 1293,
+   "dirX": -0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    309
+   ],
+   "foeModels": [
+    "M_EX900"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt17_g153",
+   "world": 2,
+   "room": 17,
+   "roomName": "Mansion: Library",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": 453,
+   "triggerY": -1100,
+   "triggerZ": -80,
+   "spotX": 353,
+   "spotY": -1340,
+   "spotZ": 120,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    318
+   ],
+   "foeModels": [
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt37_g81",
+   "world": 2,
+   "room": 37,
+   "roomName": "Underground Concourse",
+   "btlProgram": 4,
+   "door": 0,
+   "triggerX": 546,
+   "triggerY": -650,
+   "triggerZ": 2507,
+   "spotX": 546,
+   "spotY": -600,
+   "spotZ": 2607,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    301
+   ],
+   "foeModels": [
+    "M_EX010"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt03_g268",
+   "world": 2,
+   "room": 3,
+   "roomName": "Back Alley",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": 323,
+   "triggerY": 0,
+   "triggerZ": -604,
+   "spotX": 323,
+   "spotY": 0,
+   "spotZ": -604,
+   "dirX": -0.707,
+   "dirZ": -0.707,
+   "foeIds": [
+    314,
+    318
+   ],
+   "foeModels": [
+    "M_EX950",
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt10_g352",
+   "world": 2,
+   "room": 10,
+   "roomName": "Sunset Terrace",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": 19,
+   "triggerY": -1812,
+   "triggerZ": 1421,
+   "spotX": 19,
+   "spotY": -1806,
+   "spotZ": 1421,
+   "dirX": 0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    318
+   ],
+   "foeModels": [
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt22_g128",
+   "world": 2,
+   "room": 22,
+   "roomName": "Mansion: Basement Corridor",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": 784,
+   "triggerY": 0,
+   "triggerZ": -323,
+   "spotX": 784,
+   "spotY": 0,
+   "spotZ": -323,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    312,
+    318
+   ],
+   "foeModels": [
+    "M_EX930",
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt16_g51",
+   "world": 2,
+   "room": 16,
+   "roomName": "Mansion: Dining Room",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": -262,
+   "triggerY": -150,
+   "triggerZ": 23,
+   "spotX": -362,
+   "spotY": 0,
+   "spotZ": 323,
+   "dirX": 0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    314
+   ],
+   "foeModels": [
+    "M_EX950"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tt06_g527",
+   "world": 2,
+   "room": 6,
+   "roomName": "Market Street: Station Heights",
+   "btlProgram": 7,
+   "door": 0,
+   "triggerX": -136,
+   "triggerY": 186,
+   "triggerZ": -605,
+   "spotX": 264,
+   "spotY": 300,
+   "spotZ": -805,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    310,
+    317
+   ],
+   "foeModels": [
+    "M_EX880",
+    "M_EX910"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb02_g82",
+   "world": 4,
+   "room": 2,
+   "roomName": "The Great Maw",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -462,
+   "triggerY": 0,
+   "triggerZ": -818,
+   "spotX": -462,
+   "spotY": 0,
+   "spotZ": -818,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    305
+   ],
+   "foeModels": [
+    "M_EX760"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb04_g125",
+   "world": 4,
+   "room": 4,
+   "roomName": "Castle Gate",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 171,
+   "triggerY": -201,
+   "triggerZ": 216,
+   "spotX": 171,
+   "spotY": 0,
+   "spotZ": 216,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    306
+   ],
+   "foeModels": [
+    "M_EX770"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb08_g216",
+   "world": 4,
+   "room": 8,
+   "roomName": "Bailey",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": -597,
+   "triggerY": -900,
+   "triggerZ": 1084,
+   "spotX": -597,
+   "spotY": -900,
+   "spotZ": 1084,
+   "dirX": 0.0,
+   "dirZ": -1.0,
+   "foeIds": [
+    305
+   ],
+   "foeModels": [
+    "M_EX760"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb09_g245",
+   "world": 4,
+   "room": 9,
+   "roomName": "Borough",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 725,
+   "triggerY": -100,
+   "triggerZ": -219,
+   "spotX": 725,
+   "spotY": -100,
+   "spotZ": -219,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb11_g78",
+   "world": 4,
+   "room": 11,
+   "roomName": "Corridors",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -511,
+   "triggerY": 700,
+   "triggerZ": -2438,
+   "spotX": -511,
+   "spotY": 800,
+   "spotZ": -2438,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    301,
+    305,
+    306
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX760",
+    "M_EX770"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb17_g35",
+   "world": 4,
+   "room": 17,
+   "roomName": "The Great Maw",
+   "btlProgram": 25,
+   "door": 0,
+   "triggerX": 506,
+   "triggerY": 0,
+   "triggerZ": -377,
+   "spotX": 506,
+   "spotY": 0,
+   "spotZ": -377,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1468,
+    1469
+   ],
+   "foeModels": [
+    "M_EX760_RAW",
+    "M_EX770_RAW"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb21_g714",
+   "world": 4,
+   "room": 21,
+   "roomName": "Cavern of Remembrance: Depths",
+   "btlProgram": 25,
+   "door": 0,
+   "triggerX": 635,
+   "triggerY": 700,
+   "triggerZ": 136,
+   "spotX": 635,
+   "spotY": 710,
+   "spotZ": 136,
+   "dirX": -0.383,
+   "dirZ": -0.924,
+   "foeIds": [
+    2404,
+    2411
+   ],
+   "foeModels": [
+    "M_EX520_HB",
+    "M_EX720_HB"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb23_g233",
+   "world": 4,
+   "room": 23,
+   "roomName": "Cavern of Remembrance: Engine Chamber",
+   "btlProgram": 25,
+   "door": 0,
+   "triggerX": 1654,
+   "triggerY": 1400,
+   "triggerZ": 1354,
+   "spotX": 1654,
+   "spotY": 1400,
+   "spotZ": 1354,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    2409,
+    2410
+   ],
+   "foeModels": [
+    "M_EX690_HB",
+    "M_EX780_HB"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb24_g343",
+   "world": 4,
+   "room": 24,
+   "roomName": "Cavern of Remembrance: Mineshaft",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 1125,
+   "triggerY": 1850,
+   "triggerZ": 481,
+   "spotX": 1125,
+   "spotY": 2000,
+   "spotZ": 481,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    2403,
+    2404
+   ],
+   "foeModels": [
+    "M_EX500_HB",
+    "M_EX520_HB"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb25_g235",
+   "world": 4,
+   "room": 25,
+   "roomName": "Transport to Remembrance",
+   "btlProgram": 25,
+   "door": 0,
+   "triggerX": -3521,
+   "triggerY": -300,
+   "triggerZ": 644,
+   "spotX": -3521,
+   "spotY": 0,
+   "spotZ": 644,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    316
+   ],
+   "foeModels": [
+    "M_EX870"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb18_g113",
+   "world": 4,
+   "room": 18,
+   "roomName": "Restoration Site",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": 980,
+   "triggerY": -600,
+   "triggerZ": -1809,
+   "spotX": 980,
+   "spotY": -600,
+   "spotZ": -1909,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    305,
+    306
+   ],
+   "foeModels": [
+    "M_EX760",
+    "M_EX770"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb19_g249",
+   "world": 4,
+   "room": 19,
+   "roomName": "Bailey",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": -860,
+   "triggerY": -900,
+   "triggerZ": 1118,
+   "spotX": -760,
+   "spotY": -900,
+   "spotZ": 1118,
+   "dirX": 0.924,
+   "dirZ": 0.383,
+   "foeIds": [
+    121
+   ],
+   "foeModels": [
+    "M_EX600"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "hb07_g65",
+   "world": 4,
+   "room": 7,
+   "roomName": "Restoration Site",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 145,
+   "triggerY": -297,
+   "triggerZ": 1715,
+   "spotX": -155,
+   "spotY": -383,
+   "spotZ": 1515,
+   "dirX": 0.707,
+   "dirZ": -0.707,
+   "foeIds": [
+    301
+   ],
+   "foeModels": [
+    "M_EX010"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb00_g58",
+   "world": 5,
+   "room": 0,
+   "roomName": "Entrance Hall",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -33,
+   "triggerY": -150,
+   "triggerZ": -300,
+   "spotX": -33,
+   "spotY": 0,
+   "spotZ": -300,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    4
+   ],
+   "foeModels": [
+    "M_EX520"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb04_g25",
+   "world": 5,
+   "room": 4,
+   "roomName": "Ballroom",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 18,
+   "triggerY": 0,
+   "triggerZ": 57,
+   "spotX": 18,
+   "spotY": 0,
+   "spotZ": 57,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302,
+    303
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX050"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb06_g31",
+   "world": 5,
+   "room": 6,
+   "roomName": "Courtyard",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 28,
+   "triggerY": -1,
+   "triggerZ": -416,
+   "spotX": 28,
+   "spotY": -1,
+   "spotZ": -416,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    4,
+    302
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX520"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb08_g100",
+   "world": 5,
+   "room": 8,
+   "roomName": "The West Hall",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -1660,
+   "triggerY": 0,
+   "triggerZ": -1160,
+   "spotX": -1660,
+   "spotY": 0,
+   "spotZ": -1160,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb11_g34",
+   "world": 5,
+   "room": 11,
+   "roomName": "Undercroft",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -17,
+   "triggerY": -300,
+   "triggerZ": -183,
+   "spotX": -17,
+   "spotY": 0,
+   "spotZ": -183,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    4
+   ],
+   "foeModels": [
+    "M_EX520"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb12_g37",
+   "world": 5,
+   "room": 12,
+   "roomName": "Secret Passage",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -630,
+   "triggerY": -300,
+   "triggerZ": -1172,
+   "spotX": -630,
+   "spotY": -300,
+   "spotZ": -1172,
+   "dirX": 0.924,
+   "dirZ": 0.383,
+   "foeIds": [
+    4,
+    302
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX520"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb09_g46",
+   "world": 5,
+   "room": 9,
+   "roomName": "The West Wing",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -400,
+   "triggerY": -50,
+   "triggerZ": -900,
+   "spotX": -500,
+   "spotY": 0,
+   "spotZ": -1000,
+   "dirX": 0.924,
+   "dirZ": -0.383,
+   "foeIds": [
+    4
+   ],
+   "foeModels": [
+    "M_EX520"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "bb07_g21",
+   "world": 5,
+   "room": 7,
+   "roomName": "The East Wing",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -220,
+   "triggerY": 0,
+   "triggerZ": 20,
+   "spotX": -220,
+   "spotY": 0,
+   "spotZ": 20,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302,
+    303
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX050"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he05_g56",
+   "world": 6,
+   "room": 5,
+   "roomName": "Valley of the Dead",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -2627,
+   "triggerY": 0,
+   "triggerZ": 3316,
+   "spotX": -2627,
+   "spotY": 0,
+   "spotZ": 3316,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    125
+   ],
+   "foeModels": [
+    "M_EX750"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he07_g64",
+   "world": 6,
+   "room": 7,
+   "roomName": "Cave of the Dead: Entrance",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": -82,
+   "triggerY": 50,
+   "triggerZ": -171,
+   "spotX": -82,
+   "spotY": 270,
+   "spotZ": -171,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    3,
+    125,
+    303
+   ],
+   "foeModels": [
+    "M_EX050",
+    "M_EX510",
+    "M_EX750"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he08_g46",
+   "world": 6,
+   "room": 8,
+   "roomName": "Well of Captivity",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": -20,
+   "triggerY": -6,
+   "triggerZ": 92,
+   "spotX": -20,
+   "spotY": 0,
+   "spotZ": 92,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he09_g195",
+   "world": 6,
+   "room": 9,
+   "roomName": "The Underdrome",
+   "btlProgram": 28,
+   "door": 0,
+   "triggerX": 0,
+   "triggerY": -100,
+   "triggerZ": -190,
+   "spotX": 0,
+   "spotY": 0,
+   "spotZ": -190,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    71,
+    123
+   ],
+   "foeModels": [
+    "M_EX110",
+    "M_EX730"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he11_g71",
+   "world": 6,
+   "room": 11,
+   "roomName": "Underworld Caverns: Entrance",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -164,
+   "triggerY": 846,
+   "triggerZ": -679,
+   "spotX": -164,
+   "spotY": 900,
+   "spotZ": -679,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    2
+   ],
+   "foeModels": [
+    "M_EX500"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he15_g58",
+   "world": 6,
+   "room": 15,
+   "roomName": "Cave of the Dead: Passage",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 2313,
+   "triggerY": 201,
+   "triggerZ": -1599,
+   "spotX": 2313,
+   "spotY": 191,
+   "spotZ": -1599,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    3,
+    17,
+    302
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX510",
+    "M_EX690"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he17_g47",
+   "world": 6,
+   "room": 17,
+   "roomName": "Underworld Caverns: Atrium",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 111,
+   "triggerY": 200,
+   "triggerZ": 2146,
+   "spotX": 111,
+   "spotY": 200,
+   "spotZ": 2146,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    2,
+    125
+   ],
+   "foeModels": [
+    "M_EX500",
+    "M_EX750"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "he16_g47",
+   "world": 6,
+   "room": 16,
+   "roomName": "Underworld Caverns: The Lost Road",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -961,
+   "triggerY": -350,
+   "triggerZ": -196,
+   "spotX": -1061,
+   "spotY": -500,
+   "spotZ": -496,
+   "dirX": -0.707,
+   "dirZ": -0.707,
+   "foeIds": [
+    2,
+    301
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX500"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al00_g632",
+   "world": 7,
+   "room": 0,
+   "roomName": "Agrabah",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 31,
+   "triggerY": -250,
+   "triggerZ": 1963,
+   "spotX": 31,
+   "spotY": 0,
+   "spotZ": 1963,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    12,
+    71
+   ],
+   "foeModels": [
+    "M_EX110",
+    "M_EX630"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al07_g15",
+   "world": 7,
+   "room": 7,
+   "roomName": "The Cave of Wonders: Entrance",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 97,
+   "triggerY": -192,
+   "triggerZ": 651,
+   "spotX": 97,
+   "spotY": -41,
+   "spotZ": 651,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    71,
+    301
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX110"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al14_g399",
+   "world": 7,
+   "room": 14,
+   "roomName": "Sandswept Ruins",
+   "btlProgram": 17,
+   "door": 0,
+   "triggerX": 3554,
+   "triggerY": -3000,
+   "triggerZ": -12553,
+   "spotX": 3554,
+   "spotY": -2866,
+   "spotZ": -12553,
+   "dirX": 1.0,
+   "dirZ": 0.0,
+   "foeIds": [
+    4
+   ],
+   "foeModels": [
+    "M_EX520"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al12_g25",
+   "world": 7,
+   "room": 12,
+   "roomName": "The Cave of Wonders: Valley of Stone",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 2467,
+   "triggerY": -322,
+   "triggerZ": -28,
+   "spotX": 2267,
+   "spotY": -315,
+   "spotZ": -28,
+   "dirX": 0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    11
+   ],
+   "foeModels": [
+    "M_EX620"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al03_g41",
+   "world": 7,
+   "room": 3,
+   "roomName": "The Palace",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 9,
+   "triggerY": -300,
+   "triggerZ": 91,
+   "spotX": 9,
+   "spotY": 0,
+   "spotZ": 191,
+   "dirX": 0.0,
+   "dirZ": -1.0,
+   "foeIds": [
+    12
+   ],
+   "foeModels": [
+    "M_EX630"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al01_g51",
+   "world": 7,
+   "room": 1,
+   "roomName": "Bazaar",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": -879,
+   "triggerY": 0,
+   "triggerZ": -1616,
+   "spotX": -879,
+   "spotY": 0,
+   "spotZ": -1916,
+   "dirX": -0.707,
+   "dirZ": -0.707,
+   "foeIds": [
+    11,
+    77,
+    301
+   ],
+   "foeModels": [
+    "M_AL020_ICEE",
+    "M_EX010",
+    "M_EX620"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "al10_g298",
+   "world": 7,
+   "room": 10,
+   "roomName": "The Cave of Wonders: Treasure Room",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -32,
+   "triggerY": -100,
+   "triggerZ": -52,
+   "spotX": -32,
+   "spotY": 0,
+   "spotZ": -52,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    71,
+    76
+   ],
+   "foeModels": [
+    "M_AL020_FIRE",
+    "M_EX110"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "mu02_g136",
+   "world": 8,
+   "room": 2,
+   "roomName": "Checkpoint",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -1250,
+   "triggerY": -103,
+   "triggerZ": 449,
+   "spotX": -1250,
+   "spotY": 82,
+   "spotZ": 449,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    10,
+    301
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX580"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "mu05_g84",
+   "world": 8,
+   "room": 5,
+   "roomName": "Village Cave",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -307,
+   "triggerY": 0,
+   "triggerZ": -1544,
+   "spotX": -307,
+   "spotY": 0,
+   "spotZ": -1544,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    304
+   ],
+   "foeModels": [
+    "M_EX660"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "mu07_g29",
+   "world": 8,
+   "room": 7,
+   "roomName": "Summit",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 298,
+   "triggerY": -150,
+   "triggerZ": -337,
+   "spotX": 298,
+   "spotY": -32,
+   "spotZ": -337,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    302,
+    304
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX660"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "mu08_g63",
+   "world": 8,
+   "room": 8,
+   "roomName": "Imperial Square",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -45,
+   "triggerY": -100,
+   "triggerZ": 1477,
+   "spotX": -45,
+   "spotY": 0,
+   "spotZ": 1477,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    304
+   ],
+   "foeModels": [
+    "M_EX660"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "mu06_g379",
+   "world": 8,
+   "room": 6,
+   "roomName": "Ridge",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 311,
+   "triggerY": -6,
+   "triggerZ": 546,
+   "spotX": 411,
+   "spotY": -3,
+   "spotZ": 546,
+   "dirX": 0.707,
+   "dirZ": -0.707,
+   "foeIds": [
+    318
+   ],
+   "foeModels": [
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "mu01_g60",
+   "world": 8,
+   "room": 1,
+   "roomName": "Encampment",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 797,
+   "triggerY": 0,
+   "triggerZ": -1049,
+   "spotX": 697,
+   "spotY": 0,
+   "spotZ": -949,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    10
+   ],
+   "foeModels": [
+    "M_EX580"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "lk03_g34",
+   "world": 10,
+   "room": 3,
+   "roomName": "Wildebeest Valley",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 1803,
+   "triggerY": 0,
+   "triggerZ": -2272,
+   "spotX": 1803,
+   "spotY": 20,
+   "spotZ": -2272,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    20,
+    71,
+    302
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX110",
+    "M_EX780"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "lk04_g162",
+   "world": 10,
+   "room": 4,
+   "roomName": "The Savannah",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 4346,
+   "triggerY": 0,
+   "triggerZ": -6311,
+   "spotX": 4346,
+   "spotY": 155,
+   "spotZ": -6311,
+   "dirX": 0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    71
+   ],
+   "foeModels": [
+    "M_EX110"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "lk07_g13",
+   "world": 10,
+   "room": 7,
+   "roomName": "Wastelands",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -1619,
+   "triggerY": -1130,
+   "triggerZ": 5162,
+   "spotX": -1619,
+   "spotY": -885,
+   "spotZ": 5162,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    20
+   ],
+   "foeModels": [
+    "M_EX780"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "lk08_g14",
+   "world": 10,
+   "room": 8,
+   "roomName": "Jungle",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 1269,
+   "triggerY": -885,
+   "triggerZ": -1896,
+   "spotX": 1269,
+   "spotY": -890,
+   "spotZ": -1896,
+   "dirX": 0.924,
+   "dirZ": -0.383,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "lk05_g117",
+   "world": 10,
+   "room": 5,
+   "roomName": "Elephant Graveyard",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 1229,
+   "triggerY": -103,
+   "triggerZ": 2494,
+   "spotX": 1329,
+   "spotY": -198,
+   "spotZ": 2394,
+   "dirX": -0.383,
+   "dirZ": -0.924,
+   "foeIds": [
+    120
+   ],
+   "foeModels": [
+    "M_EX420"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "dc00_g47",
+   "world": 12,
+   "room": 0,
+   "roomName": "Audience Chamber",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -200,
+   "triggerY": 0,
+   "triggerZ": 0,
+   "spotX": -200,
+   "spotY": 0,
+   "spotZ": 0,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    7
+   ],
+   "foeModels": [
+    "M_EX550"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "dc02_g34",
+   "world": 12,
+   "room": 2,
+   "roomName": "Colonnade",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -2341,
+   "triggerY": 0,
+   "triggerZ": 602,
+   "spotX": -2641,
+   "spotY": 0,
+   "spotZ": 602,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1365
+   ],
+   "foeModels": [
+    "M_EX020_RAW"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "dc03_g42",
+   "world": 12,
+   "room": 3,
+   "roomName": "Courtyard",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 1581,
+   "triggerY": -158,
+   "triggerZ": 1841,
+   "spotX": 1581,
+   "spotY": 0,
+   "spotZ": 1941,
+   "dirX": 0.0,
+   "dirZ": -1.0,
+   "foeIds": [
+    7,
+    301,
+    302
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX020",
+    "M_EX550"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "wi01_g15",
+   "world": 13,
+   "room": 1,
+   "roomName": "Pier",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 169,
+   "triggerY": -214,
+   "triggerZ": 31,
+   "spotX": 169,
+   "spotY": -172,
+   "spotZ": 31,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1829,
+    1843
+   ],
+   "foeModels": [
+    "M_EX550_WI",
+    "M_EX660_WI"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "wi06_g220",
+   "world": 13,
+   "room": 6,
+   "roomName": "Scene of the Fire",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": -163,
+   "triggerY": -59,
+   "triggerZ": 339,
+   "spotX": -163,
+   "spotY": 0,
+   "spotZ": 339,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1828,
+    2025
+   ],
+   "foeModels": [
+    "M_EX050_WI",
+    "M_EX540_WI"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "wi02_g24",
+   "world": 13,
+   "room": 2,
+   "roomName": "Waterway",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -415,
+   "triggerY": -50,
+   "triggerZ": -921,
+   "spotX": -415,
+   "spotY": 3,
+   "spotZ": -821,
+   "dirX": -1.0,
+   "dirZ": -0.0,
+   "foeIds": [
+    1843
+   ],
+   "foeModels": [
+    "M_EX660_WI"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "wi03_g25",
+   "world": 13,
+   "room": 3,
+   "roomName": "Wharf",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 108,
+   "triggerY": 0,
+   "triggerZ": -92,
+   "spotX": 8,
+   "spotY": 0,
+   "spotZ": 8,
+   "dirX": 1.0,
+   "dirZ": 0.0,
+   "foeIds": [
+    1829,
+    1840,
+    1843,
+    1849
+   ],
+   "foeModels": [
+    "M_EX010_WI",
+    "M_EX020_WI",
+    "M_EX550_WI",
+    "M_EX660_WI"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "wi07_g27",
+   "world": 13,
+   "room": 7,
+   "roomName": "Mickey's House",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -45,
+   "triggerY": 0,
+   "triggerZ": 638,
+   "spotX": 55,
+   "spotY": 0,
+   "spotZ": 538,
+   "dirX": -0.924,
+   "dirZ": 0.383,
+   "foeIds": [
+    1830,
+    1840
+   ],
+   "foeModels": [
+    "M_EX020_WI",
+    "M_EX560_WI"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "wi04_g229",
+   "world": 13,
+   "room": 4,
+   "roomName": "Lilliput",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 55,
+   "triggerY": -250,
+   "triggerZ": 203,
+   "spotX": 55,
+   "spotY": 0,
+   "spotZ": 103,
+   "dirX": 0.924,
+   "dirZ": -0.383,
+   "foeIds": [
+    1828,
+    1849
+   ],
+   "foeModels": [
+    "M_EX010_WI",
+    "M_EX540_WI"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "nm04_g83",
+   "world": 14,
+   "room": 4,
+   "roomName": "Hinterlands",
+   "btlProgram": 3,
+   "door": 0,
+   "triggerX": 471,
+   "triggerY": 49,
+   "triggerZ": 959,
+   "spotX": 471,
+   "spotY": 52,
+   "spotZ": 959,
+   "dirX": -0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    119,
+    1834
+   ],
+   "foeModels": [
+    "M_EX120_NM",
+    "M_EX200_NM"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "nm06_g91",
+   "world": 14,
+   "room": 6,
+   "roomName": "Candy Cane Lane",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 786,
+   "triggerY": -10,
+   "triggerZ": -1139,
+   "spotX": 786,
+   "spotY": 0,
+   "spotZ": -1139,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1220,
+    1833
+   ],
+   "foeModels": [
+    "M_EX020_NM",
+    "M_EX700_NM"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "nm00_g217",
+   "world": 14,
+   "room": 0,
+   "roomName": "Halloween Town Square",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": 500,
+   "triggerY": -135,
+   "triggerZ": -814,
+   "spotX": 800,
+   "spotY": -39,
+   "spotZ": -714,
+   "dirX": -0.383,
+   "dirZ": -0.924,
+   "foeIds": [
+    119,
+    1838
+   ],
+   "foeModels": [
+    "M_EX010_NM",
+    "M_EX200_NM"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "nm03_g44",
+   "world": 14,
+   "room": 3,
+   "roomName": "Curly Hill",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 743,
+   "triggerY": -284,
+   "triggerZ": -816,
+   "spotX": 843,
+   "spotY": -133,
+   "spotZ": -916,
+   "dirX": 0.924,
+   "dirZ": -0.383,
+   "foeIds": [
+    1827
+   ],
+   "foeModels": [
+    "M_EX500_NM"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "nm02_g113",
+   "world": 14,
+   "room": 2,
+   "roomName": "Graveyard",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 455,
+   "triggerY": -3,
+   "triggerZ": -833,
+   "spotX": 355,
+   "spotY": 13,
+   "spotZ": -833,
+   "dirX": 0.383,
+   "dirZ": 0.924,
+   "foeIds": [
+    1845
+   ],
+   "foeModels": [
+    "M_EX760_NM"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca02_g110",
+   "world": 16,
+   "room": 2,
+   "roomName": "Town",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -994,
+   "triggerY": -80,
+   "triggerZ": 1436,
+   "spotX": -994,
+   "spotY": 141,
+   "spotZ": 1436,
+   "dirX": 0.924,
+   "dirZ": -0.383,
+   "foeIds": [
+    14
+   ],
+   "foeModels": [
+    "M_EX650"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca09_g145",
+   "world": 16,
+   "room": 9,
+   "roomName": "Isla de Muerta: Cave Mouth",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -262,
+   "triggerY": 50,
+   "triggerZ": -241,
+   "spotX": -262,
+   "spotY": 39,
+   "spotZ": -241,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    8,
+    74
+   ],
+   "foeModels": [
+    "M_EX210",
+    "M_EX560"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca18_g139",
+   "world": 16,
+   "room": 18,
+   "roomName": "The Black Pearl",
+   "btlProgram": 11,
+   "door": 0,
+   "triggerX": -46,
+   "triggerY": -650,
+   "triggerZ": 481,
+   "spotX": -46,
+   "spotY": -649,
+   "spotZ": 481,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    3
+   ],
+   "foeModels": [
+    "M_EX510"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca20_g139",
+   "world": 16,
+   "room": 20,
+   "roomName": "The Black Pearl",
+   "btlProgram": 11,
+   "door": 0,
+   "triggerX": -21,
+   "triggerY": -649,
+   "triggerZ": 485,
+   "spotX": -21,
+   "spotY": -649,
+   "spotZ": 485,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    120
+   ],
+   "foeModels": [
+    "M_EX420"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca13_g289",
+   "world": 16,
+   "room": 13,
+   "roomName": "Isla de Muerta: Moonlight Nook",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": 70,
+   "triggerY": 0,
+   "triggerZ": 144,
+   "spotX": -30,
+   "spotY": -39,
+   "spotZ": 144,
+   "dirX": -0.924,
+   "dirZ": -0.383,
+   "foeIds": [
+    8,
+    14,
+    74,
+    123,
+    301
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX210",
+    "M_EX560",
+    "M_EX650",
+    "M_EX730"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca14_g316",
+   "world": 16,
+   "room": 14,
+   "roomName": "Ship Graveyard: Seadrift Keep",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": -321,
+   "triggerY": -892,
+   "triggerZ": -1021,
+   "spotX": -221,
+   "spotY": -699,
+   "spotZ": -921,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    304
+   ],
+   "foeModels": [
+    "M_EX660"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca01_g664",
+   "world": 16,
+   "room": 1,
+   "roomName": "Harbor",
+   "btlProgram": 2,
+   "door": 0,
+   "triggerX": 358,
+   "triggerY": -2,
+   "triggerZ": -686,
+   "spotX": 358,
+   "spotY": -2,
+   "spotZ": -486,
+   "dirX": 0.924,
+   "dirZ": 0.383,
+   "foeIds": [
+    302
+   ],
+   "foeModels": [
+    "M_EX020"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca12_g495",
+   "world": 16,
+   "room": 12,
+   "roomName": "Isla de Muerta: Powder Store",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": -80,
+   "triggerY": 22,
+   "triggerZ": -950,
+   "spotX": -80,
+   "spotY": 22,
+   "spotZ": -950,
+   "dirX": -1.0,
+   "dirZ": -0.0,
+   "foeIds": [
+    120
+   ],
+   "foeModels": [
+    "M_EX420"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca15_g266",
+   "world": 16,
+   "room": 15,
+   "roomName": "Ship Graveyard: Seadrift Row",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": 2192,
+   "triggerY": -97,
+   "triggerZ": 313,
+   "spotX": 1892,
+   "spotY": -54,
+   "spotZ": 413,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    17
+   ],
+   "foeModels": [
+    "M_EX690"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "ca19_g222",
+   "world": 16,
+   "room": 19,
+   "roomName": "The Black Pearl",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 152,
+   "triggerY": -1200,
+   "triggerZ": -2123,
+   "spotX": 352,
+   "spotY": -1000,
+   "spotZ": -1723,
+   "dirX": 1.0,
+   "dirZ": 0.0,
+   "foeIds": [
+    14,
+    74,
+    301
+   ],
+   "foeModels": [
+    "M_EX010",
+    "M_EX210",
+    "M_EX650"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tr04_g111",
+   "world": 17,
+   "room": 4,
+   "roomName": "I/O Tower: Hallway",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 196,
+   "triggerY": -50,
+   "triggerZ": 57,
+   "spotX": 196,
+   "spotY": 0,
+   "spotZ": 57,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1852
+   ],
+   "foeModels": [
+    "M_EX120_TR"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tr03_g100",
+   "world": 17,
+   "room": 3,
+   "roomName": "Dataspace",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 745,
+   "triggerY": 5,
+   "triggerZ": 29,
+   "spotX": 945,
+   "spotY": 60,
+   "spotZ": 29,
+   "dirX": 1.0,
+   "dirZ": 0.0,
+   "foeIds": [
+    121,
+    1839
+   ],
+   "foeModels": [
+    "M_EX010_TR",
+    "M_EX600"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tr01_g174",
+   "world": 17,
+   "room": 1,
+   "roomName": "Canyon",
+   "btlProgram": 10,
+   "door": 0,
+   "triggerX": -987,
+   "triggerY": -20,
+   "triggerZ": -2188,
+   "spotX": -987,
+   "spotY": -20,
+   "spotZ": -2188,
+   "dirX": 0.0,
+   "dirZ": -1.0,
+   "foeIds": [
+    1832
+   ],
+   "foeModels": [
+    "M_EX650_TR"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "tr06_g81",
+   "world": 17,
+   "room": 6,
+   "roomName": "Simulation Hangar",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 10,
+   "triggerY": -200,
+   "triggerZ": -741,
+   "spotX": 10,
+   "spotY": -50,
+   "spotZ": -741,
+   "dirX": 1.0,
+   "dirZ": 0.0,
+   "foeIds": [
+    121,
+    1852
+   ],
+   "foeModels": [
+    "M_EX120_TR",
+    "M_EX600"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh02_g370",
+   "world": 18,
+   "room": 2,
+   "roomName": "Fragment Crossing",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 1267,
+   "triggerY": 0,
+   "triggerZ": -3000,
+   "spotX": 1267,
+   "spotY": 0,
+   "spotZ": -3000,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    1365
+   ],
+   "foeModels": [
+    "M_EX020_RAW"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh03_g136",
+   "world": 18,
+   "room": 3,
+   "roomName": "Memory's Skyscraper",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -1221,
+   "triggerY": 0,
+   "triggerZ": 284,
+   "spotX": -1221,
+   "spotY": 0,
+   "spotZ": 284,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    120,
+    302
+   ],
+   "foeModels": [
+    "M_EX020",
+    "M_EX420"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh06_g138",
+   "world": 18,
+   "room": 6,
+   "roomName": "Nothing's Call",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -324,
+   "triggerY": 0,
+   "triggerZ": -3002,
+   "spotX": -324,
+   "spotY": 0,
+   "spotZ": -3002,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    311
+   ],
+   "foeModels": [
+    "M_EX920"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh11_g115",
+   "world": 18,
+   "room": 11,
+   "roomName": "Hall of Empty Melodies",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 14,
+   "triggerY": -1100,
+   "triggerZ": -2004,
+   "spotX": 14,
+   "spotY": -1100,
+   "spotZ": -2004,
+   "dirX": 0.707,
+   "dirZ": 0.707,
+   "foeIds": [
+    309,
+    311
+   ],
+   "foeModels": [
+    "M_EX900",
+    "M_EX920"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh14_g240",
+   "world": 18,
+   "room": 14,
+   "roomName": "Havoc's Divide",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 0,
+   "triggerY": 0,
+   "triggerZ": -400,
+   "spotX": 0,
+   "spotY": 0,
+   "spotZ": -400,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    314,
+    318
+   ],
+   "foeModels": [
+    "M_EX950",
+    "M_EX990"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh17_g97",
+   "world": 18,
+   "room": 17,
+   "roomName": "Ruin and Creation's Passage",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 4947,
+   "triggerY": 200,
+   "triggerZ": 6726,
+   "spotX": 4947,
+   "spotY": 200,
+   "spotZ": 6726,
+   "dirX": 1.0,
+   "dirZ": 0.0,
+   "foeIds": [
+    311,
+    316
+   ],
+   "foeModels": [
+    "M_EX870",
+    "M_EX920"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh16_g97",
+   "world": 18,
+   "room": 16,
+   "roomName": "Naught's Approach",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": 630,
+   "triggerY": -406,
+   "triggerZ": 1398,
+   "spotX": 530,
+   "spotY": -400,
+   "spotZ": 1398,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    310,
+    312
+   ],
+   "foeModels": [
+    "M_EX910",
+    "M_EX930"
+   ],
+   "verified": false,
+   "waves": 1
+  },
+  {
+   "key": "eh12_g82",
+   "world": 18,
+   "room": 12,
+   "roomName": "Naught's Skyway",
+   "btlProgram": 1,
+   "door": 0,
+   "triggerX": -1476,
+   "triggerY": 0,
+   "triggerZ": 1665,
+   "spotX": -1476,
+   "spotY": 0,
+   "spotZ": 1665,
+   "dirX": 0.0,
+   "dirZ": 1.0,
+   "foeIds": [
+    310,
+    312
+   ],
+   "foeModels": [
+    "M_EX910",
+    "M_EX930"
+   ],
+   "verified": false,
+   "waves": 1
+  }
+ ]
+}

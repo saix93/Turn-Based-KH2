@@ -1,0 +1,129 @@
+{
+  "sheet": "partnerMoves",
+  "about": "Each partner's own Magic and Techniques. On a partner's turn the mod leaves only the chosen ability equipped in that partner's own ability list in the save (abilityList, 80 slots of u16, bit 0x8000 = equipped), so the partner's KH2 AI can perform exactly that move and nothing else; for Attack it unequips all of these, leaving plain melee. The list is restored as it was when the turn ends. Ability ids are KH2's (Donald Fire 0xA5 .. Donald Cure 0xA8, Goofy Tornado 0x1A7, Goofy Turbo 0x1A9, Goofy Bash 0x1AD). moveMotions are the partner's motion ids (actor +0x180) that show the move has started; melee is 151-153, 173, 181-182 for both.",
+  "columns": [
+    "key",
+    "partnerModel",
+    "kind",
+    "name",
+    "abilityId",
+    "abilityList",
+    "target",
+    "windowSec",
+    "moveMotions",
+    "description"
+  ],
+  "rows": [
+    {
+      "key": "donald_fire",
+      "partnerModel": "P_EX020",
+      "kind": "magic",
+      "name": "Fire",
+      "abilityId": "0xA5",
+      "abilityList": "0x2658",
+      "target": "enemy",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192
+      ],
+      "description": "Donald hurls a fireball."
+    },
+    {
+      "key": "donald_blizzard",
+      "partnerModel": "P_EX020",
+      "kind": "magic",
+      "name": "Blizzard",
+      "abilityId": "0xA6",
+      "abilityList": "0x2658",
+      "target": "enemy",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192
+      ],
+      "description": "Donald fires shards of ice."
+    },
+    {
+      "key": "donald_thunder",
+      "partnerModel": "P_EX020",
+      "kind": "magic",
+      "name": "Thunder",
+      "abilityId": "0xA7",
+      "abilityList": "0x2658",
+      "target": "enemy",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192
+      ],
+      "description": "Donald calls down lightning."
+    },
+    {
+      "key": "donald_cure",
+      "partnerModel": "P_EX020",
+      "kind": "magic",
+      "name": "Cure",
+      "abilityId": "0xA8",
+      "abilityList": "0x2658",
+      "target": "party",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192
+      ],
+      "description": "Donald heals the party."
+    },
+    {
+      "key": "goofy_bash",
+      "partnerModel": "P_EX030",
+      "kind": "technique",
+      "name": "Goofy Bash",
+      "abilityId": "0x1AD",
+      "abilityList": "0x276C",
+      "target": "enemy",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192,
+        193,
+        194
+      ],
+      "description": "Goofy charges shield-first into an enemy."
+    },
+    {
+      "key": "goofy_tornado",
+      "partnerModel": "P_EX030",
+      "kind": "technique",
+      "name": "Goofy Tornado",
+      "abilityId": "0x1A7",
+      "abilityList": "0x276C",
+      "target": "enemy",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192,
+        193,
+        194
+      ],
+      "description": "Goofy spins through the enemies."
+    },
+    {
+      "key": "goofy_turbo",
+      "partnerModel": "P_EX030",
+      "kind": "technique",
+      "name": "Goofy Turbo",
+      "abilityId": "0x1A9",
+      "abilityList": "0x276C",
+      "target": "enemy",
+      "windowSec": 6.0,
+      "moveMotions": [
+        191,
+        192,
+        193,
+        194
+      ],
+      "description": "Goofy dashes across the field, shield first."
+    }
+  ]
+}

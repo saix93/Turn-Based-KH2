@@ -1,0 +1,94 @@
+{
+  "sheet": "commands",
+  "about": "Battle menu shown on a party member's turn (the FFX turn concept; every move is KH2's own). who: sora, partner or both. attack is a plain melee strike for everyone; magic and techniques open that character's own lists (Sora: his spells; partners: sheets/partnerMoves); defend uses Guard and halves damage until the next turn; party opens KH2's pause menu so Party can swap a partner; escape only works in random encounters.",
+  "columns": [
+    "key",
+    "label",
+    "order",
+    "who",
+    "kind",
+    "ctbRank",
+    "windowSec",
+    "encounterOnly",
+    "description"
+  ],
+  "rows": [
+    {
+      "key": "attack",
+      "label": "Attack",
+      "order": 0,
+      "who": "both",
+      "kind": "attack",
+      "ctbRank": 3,
+      "windowSec": 2.2,
+      "encounterOnly": false,
+      "description": "Step up to one enemy and strike it."
+    },
+    {
+      "key": "magic",
+      "label": "Magic",
+      "order": 1,
+      "who": "both",
+      "kind": "submenu_magic",
+      "ctbRank": 3,
+      "windowSec": 0.0,
+      "encounterOnly": false,
+      "description": "Cast one of this character's spells."
+    },
+    {
+      "key": "technique",
+      "label": "Techniques",
+      "order": 2,
+      "who": "partner",
+      "kind": "submenu_tech",
+      "ctbRank": 3,
+      "windowSec": 0.0,
+      "encounterOnly": false,
+      "description": "Use one of this character's own techniques."
+    },
+    {
+      "key": "item",
+      "label": "Items",
+      "order": 3,
+      "who": "both",
+      "kind": "submenu_items",
+      "ctbRank": 2,
+      "windowSec": 0.0,
+      "encounterOnly": false,
+      "description": "Use one of the items equipped on this character."
+    },
+    {
+      "key": "defend",
+      "label": "Defend",
+      "order": 4,
+      "who": "both",
+      "kind": "defend",
+      "ctbRank": 2,
+      "windowSec": 0.0,
+      "encounterOnly": false,
+      "description": "Guard: take half damage until the next turn, which comes sooner."
+    },
+    {
+      "key": "party",
+      "label": "Party",
+      "order": 5,
+      "who": "sora",
+      "kind": "party",
+      "ctbRank": 0,
+      "windowSec": 0.0,
+      "encounterOnly": false,
+      "description": "Swap a partner for this world's own partner (KH2's Party command). Costs no turn."
+    },
+    {
+      "key": "escape",
+      "label": "Escape",
+      "order": 6,
+      "who": "sora",
+      "kind": "escape",
+      "ctbRank": 3,
+      "windowSec": 0.0,
+      "encounterOnly": true,
+      "description": "Run from a random encounter."
+    }
+  ]
+}
