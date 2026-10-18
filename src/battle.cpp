@@ -63,6 +63,13 @@ int SpotForRoom(int world, int room) {
 // Test mode only, from a room without enemies: this world's rooms with a battle spot, nearest first, in turn
 // (a room whose enemies were just beaten doesn't bring them back straight away).
 constexpr int kTestWorld = 7, kTestRoom = 0;   // test runs fight in Agrabah (al00); 0 = the save's own world
+// Test runs fight here every time when set: The Palace, whose program spawns only Luna Bandits (quick to defeat).
+constexpr const char* kTestSpot = "al03_g41";
+int NearestSpot(int world, int room);
+int TestSpot() {
+    for (int i = 0; i < kMaps; ++i) if (kTestSpot && !strcmp(battleMaps[i].key, kTestSpot)) return i;
+    return kTestWorld ? NearestSpot(kTestWorld, kTestRoom) : -1;
+}
 int NearestSpot(int world, int room) {
     std::vector<int> mine;
     for (int i = 0; i < kMaps; ++i) if (battleMaps[i].world == world) mine.push_back(i);
@@ -644,11 +651,24 @@ void ApplyFreezes() {
         }
         SetHold(u, hold);
     }
+    // Pooled enemies (out of sight) never act: held in group 0 while it's frozen, else frozen in their own group.
     for (auto& p : g_pool) {
-        bool hold = !off && !soraActing && !partnerActing;
+        bool hold = !off && (mask & PL);
         uint32_t f = Rd<uint32_t>(p.actor + 0x6C8);
         if (hold && !(f & 0x80)) { Wr<uint32_t>(p.actor + 0x6C8, f | 0x80); p.held = true; }
         else if (!hold && p.held) { Wr<uint32_t>(p.actor + 0x6C8, f & ~0x80u); p.held = false; }
+    }
+    // Some enemies are in a group of their own rather than boss/mob (Crimson Jazz: 21). While no enemy acts, the
+    // groups of those not held are frozen too, or they'd keep casting (from out of sight, for a pooled one).
+    bool enemyActing = acting && cs == Side::Enemy;
+    if (!off && !enemyActing) {
+        auto freezeOwn = [&](uintptr_t objentry, bool held) {
+            if (held || !objentry) return;
+            uint8_t grp = Rd<uint8_t>(objentry + 4);
+            if (grp >= 2 && grp < 32) mask |= 1u << grp;
+        };
+        for (auto& u : g_units) if (!u.party() && u.actor) freezeOwn(u.objentry, u.held);
+        for (auto& p : g_pool) freezeOwn(p.objentry, p.held);
     }
     (void)E;
     SetGroups(mask);
@@ -1278,8 +1298,9 @@ void CatchStrays(const std::vector<ActorInfo>& actors) {
             g_strays.push_back(a.actor);
             Log("stray enemy-like actor %s (objectId %u, type %u, hp %d/%d, status %p): kept out of the battle", a.name, a.objectId, a.type, a.hp, a.maxHp, (void*)a.status);
         }
+        // One still spawning (no status yet) is left untouched: holding it mid-spawn left KH2 with a half-built
+        // actor that crashed when a move (Goofy Tornado) reached it. It's pooled once it has its HP.
         if (a.status && a.maxHp > 0 && a.hp > 0) g_pool.push_back({a.actor, a.objentry, a.status, a.objectId, a.x, a.y, a.z, false});
-        else { uint32_t f = Rd<uint32_t>(a.actor + 0x6C8); if (!(f & 0x80)) Wr<uint32_t>(a.actor + 0x6C8, f | 0x80); }
     }
 }
 void TickBattle(const std::vector<ActorInfo>& actors, double now) {
@@ -1571,7 +1592,7 @@ void TickField(const std::vector<ActorInfo>& actors, double now) {
         SetPhase(Phase::Shatter);
     } else if (testGo && g_pool.empty()) {
         // Melty's test mode in a room without enemies: travel to the nearest room of this world that has some.
-        int m = kTestWorld ? NearestSpot(kTestWorld, kTestRoom) : NearestSpot(loc.world, loc.room);
+        int m = (kTestSpot || kTestWorld) ? TestSpot() : NearestSpot(loc.world, loc.room);
         if (m < 0) return;
         g_arena = m; g_spotHere = false;
         g_returnLoc = loc;

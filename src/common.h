@@ -9,7 +9,7 @@
 #include <mutex>
 #include <atomic>
 
-#define FFXTB_VERSION "1.6.43"
+#define FFXTB_VERSION "1.6.45"
 
 // Log to %LOCALAPPDATA%\KH2FFXTB\ffxtb.log (also the file Melty collects on a crash).
 void Log(const char* fmt, ...);
