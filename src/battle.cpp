@@ -63,11 +63,16 @@ int SpotForRoom(int world, int room) {
 // Test mode only, from a room without enemies: this world's rooms with a battle spot, nearest first, in turn
 // (a room whose enemies were just beaten doesn't bring them back straight away).
 constexpr int kTestWorld = 7, kTestRoom = 0;   // test runs fight in Agrabah (al00); 0 = the save's own world
-// Test runs fight here every time when set: The Palace, whose program spawns only Luna Bandits (quick to defeat).
-constexpr const char* kTestSpot = "al03_g41";
+// Test runs fight at these spots in turn, one world per battle (for footage and listing screenshots): Beast's
+// Castle, The Land of Dragons, Port Royal, then The Palace (Luna Bandits only). Worlds where the party changes
+// form are left out.
+constexpr const char* kTestSpots[] = {"bb04_g25", "mu08_g63", "ca02_g110", "al03_g41"};
+constexpr const char* kTestSpot = kTestSpots[0];
 int NearestSpot(int world, int room);
 int TestSpot() {
-    for (int i = 0; i < kMaps; ++i) if (kTestSpot && !strcmp(battleMaps[i].key, kTestSpot)) return i;
+    static int next = 0;
+    const char* key = kTestSpots[next++ % (sizeof(kTestSpots) / sizeof(kTestSpots[0]))];
+    for (int i = 0; i < kMaps; ++i) if (!strcmp(battleMaps[i].key, key)) return i;
     return kTestWorld ? NearestSpot(kTestWorld, kTestRoom) : -1;
 }
 int NearestSpot(int world, int room) {

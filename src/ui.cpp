@@ -96,7 +96,10 @@ void Bar(ImDrawList* dl, ImVec2 a, float w, float h, float f, uint32_t fill) {
 // Screen areas: these two windows sit exactly over KH2's command menu and HP gauge, opaque, so
 // KH2's own battle HUD stays hidden behind them.
 // Over KH2's command menu and HP gauge; in test runs they sit higher, so recordings show KH2's own menu.
-float TestLift() { return S.testMode ? 0.33f : 0.f; }
+// Test runs raise the mod's windows (out of the way of KH2's own menu in the recordings) and show a debug line;
+// off for a build that takes listing screenshots, so they show the layout players get.
+constexpr bool kTestLayout = true;
+float TestLift() { return S.testMode && kTestLayout ? 0.33f : 0.f; }
 ImVec2 CmdA(float sw, float sh) { return ImVec2(sw * 0.012f, sh * (0.665f - TestLift())); }
 ImVec2 CmdB(float sw, float sh) { return ImVec2(sw * 0.262f, sh * (0.985f - TestLift())); }
 ImVec2 PartyA(float sw, float sh) { return ImVec2(sw * 0.67f, sh * (0.735f - TestLift())); }
@@ -568,7 +571,7 @@ void Frame(HWND hwnd) {
     }
     if (S.phase == Phase::Returning && now - S.phaseStart < 1.2)
         dl->AddRectFilled(ImVec2(0, 0), ImVec2(sw, sh), IM_COL32(0, 0, 0, (int)(255 * std::min(1.0, (1.2 - (now - S.phaseStart)) / 0.4))));
-    if (g_debug || S.testMode) {
+    if (g_debug || (S.testMode && kTestLayout)) {
         std::string d = "KH2 turn-based " FFXTB_VERSION " | " + S.debug + (S.testMode ? " | TEST" : "");
         Text(dl, Px(15), ImVec2(8, sh - Px(22)), IM_COL32(200, 255, 200, 220), d);
     }
