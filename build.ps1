@@ -1,4 +1,4 @@
-﻿# Builds dist/KH2xFFX-<version>/dinput8.dll with MSVC (x64). Runs the sheet preflight first.
+﻿# Builds dist/TurnBasedKH2-<version>/dinput8.dll with MSVC (x64). Runs the sheet preflight first.
 param([string]$Version = "1.0.0")
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
@@ -8,7 +8,7 @@ if ($LASTEXITCODE -ne 0) { throw "sheet preflight failed" }
 $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
 $vs = & $vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
 $vcvars = Join-Path $vs "VC\Auxiliary\Build\vcvars64.bat"
-$obj = "$root\build\obj"; $out = "$root\dist\KH2xFFX-$Version"
+$obj = "$root\build\obj"; $out = "$root\dist\TurnBasedKH2-$Version"
 New-Item -ItemType Directory -Force $obj, $out | Out-Null
 
 $tp = "$root\third_party"

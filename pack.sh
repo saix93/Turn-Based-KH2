@@ -1,10 +1,10 @@
 #!/bin/bash
-# usage: ./pack.sh <version>  -> builds, zips dist/KH2xFFX-<version>.zip and prints size + sha256
+# usage: ./pack.sh <version>  -> builds, zips dist/TurnBasedKH2-<version>.zip and prints size + sha256
 set -e
 V=$1
-sed -i "s/#define FFXTB_VERSION \".*\"/#define FFXTB_VERSION \"$V\"/" src/common.h
+sed -i "s/#define TBKH2_VERSION \".*\"/#define TBKH2_VERSION \"$V\"/" src/common.h
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File build.ps1 -Version $V 2>&1 | grep -E "error|built"
-d=dist/KH2xFFX-$V
+d=dist/TurnBasedKH2-$V
 cp package/README.txt package/LICENSE.txt package/THIRD_PARTY_LICENSES.txt package/steam_appid.txt $d/
 python -c "
 import zipfile,os

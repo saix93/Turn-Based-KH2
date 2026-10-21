@@ -1,6 +1,6 @@
 # Turn-Based Kingdom Hearts 2
 
-**KINGDOM HEARTS II, fought like FINAL FANTASY X.** Random encounters, a visible turn order and one action per turn.
+**KINGDOM HEARTS II with turn-based battles, inspired by FINAL FANTASY X's combat.** Random encounters, a visible turn order and one action per turn.
 
 A mod for the Steam version of *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*.
 
@@ -13,7 +13,7 @@ A mod for the Steam version of *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*.
 ## What it plays like
 
 - **Random encounters.** Enemies no longer roam the field. Walking fills a hidden encounter meter, and when it fills the screen shatters and a battle starts. Each part of a world has its own battle spot, so you fight where you are.
-- **A CTB turn order, as in FFX.** The order of the next turns is listed on the right, and faster characters act more often. Only the one taking a turn moves; everyone else waits in their place.
+- **A turn order.** The order of the next turns is listed on the right, and faster characters act more often. Only the one taking a turn moves; everyone else waits in their place.
 - **Formation and camera.** Sora and his two partners line up facing the enemy line, and the camera sits behind the party. Whoever acts steps forward, makes a real KH2 move, then walks back.
 - **Sora's commands:**
   - **Attack:** his real Keyblade strike.
@@ -74,7 +74,7 @@ You need:
    - generates `src/gen/sheets.h` from the JSON in `sheets/`;
    - finds Visual Studio by itself (through `vswhere`) and loads its x64 environment;
    - compiles the mod, Dear ImGui and MinHook into one DLL. The C runtime is linked statically, so no Visual C++ redistributable is needed.
-3. The result is `dist/KH2xFFX-1.0.0/dinput8.dll`.
+3. The result is `dist/TurnBasedKH2-1.0.0/dinput8.dll`.
 
 `pack.sh <version>` (from Git Bash) does the same build, also stamps the version into the mod, and zips the DLL with `steam_appid.txt`, the readme and the licenses.
 
@@ -93,7 +93,7 @@ You need:
 - **Where it runs:** only inside `KINGDOM HEARTS II FINAL MIX.exe`, and only after it has checked the game's code bytes. On any other build, or in the other games of the collection, it stays off.
 - **What it does:** it hooks KH2's functions with [MinHook](https://github.com/TsudaKageyu/minhook) and drives KH2's own actors, commands and menus. The hooks cover the per-frame entity loop, the command executor, the freeze check, input, the camera, and the frame being presented. It draws its windows with Dear ImGui (DirectX 11/12).
 - **Its data:** the battle rules come from the JSON sheets in `sheets/`: commands, magic, items, partner moves, battle spots per room, and timings and camera settings. They are compiled into the DLL.
-- **Log:** `%LOCALAPPDATA%\KH2FFXTBfxtb.log` (the previous session is kept as `ffxtb.prev.log`). F10 shows a small debug line.
+- **Log:** `%LOCALAPPDATA%\TurnBasedKH2\turnbased.log` (the previous session is kept as `turnbased.prev.log`). F10 shows a small debug line.
 
 ## Project layout
 

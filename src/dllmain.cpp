@@ -1,4 +1,4 @@
-// KH2 x FFX: Turn-Based Twilight. Loads as dinput8.dll beside the KINGDOM HEARTS HD 1.5+2.5 executables
+// Turn-Based Kingdom Hearts 2. Loads as dinput8.dll beside the KINGDOM HEARTS HD 1.5+2.5 executables
 // (KH2 imports DINPUT8.dll), forwards DirectInput to the system DLL, and only does anything inside KH2.
 #include "common.h"
 #include "game.h"
@@ -42,7 +42,7 @@ void __fastcall hkLoop(void* a) {
 }
 
 DWORD WINAPI InitThread(LPVOID) {
-    Log("KH2 x FFX %s starting (pid %lu)", FFXTB_VERSION, GetCurrentProcessId());
+    Log("KH2 x FFX %s starting (pid %lu)", TBKH2_VERSION, GetCurrentProcessId());
     g_base = (uintptr_t)GetModuleHandleW(nullptr);
     // Wait for the game to unpack and initialise its tables.
     for (int i = 0; i < 300 && !game::VerifyExe(); ++i) { if (i == 0) Log("waiting for the executable to match..."); Sleep(100); }
@@ -79,7 +79,7 @@ std::wstring DataDir() {
     static std::wstring d;
     if (d.empty()) {
         wchar_t buf[MAX_PATH]; GetEnvironmentVariableW(L"LOCALAPPDATA", buf, MAX_PATH);
-        d = std::wstring(buf) + L"\\KH2FFXTB";
+        d = std::wstring(buf) + L"\\TurnBasedKH2";
         CreateDirectoryW(d.c_str(), nullptr);
     }
     return d;
@@ -92,9 +92,9 @@ double NowSec() {
 void Log(const char* fmt, ...) {
     std::lock_guard<std::mutex> lk(g_logLock);
     if (!g_log) {
-        // The previous session's log is kept beside it (ffxtb.prev.log).
-        std::wstring path = DataDir() + L"\\ffxtb.log";
-        MoveFileExW(path.c_str(), (DataDir() + L"\\ffxtb.prev.log").c_str(), MOVEFILE_REPLACE_EXISTING);
+        // The previous session's log is kept beside it (turnbased.prev.log).
+        std::wstring path = DataDir() + L"\\turnbased.log";
+        MoveFileExW(path.c_str(), (DataDir() + L"\\turnbased.prev.log").c_str(), MOVEFILE_REPLACE_EXISTING);
         g_log = _wfsopen(path.c_str(), L"w", _SH_DENYNO); if (!g_log) return;
     }
     SYSTEMTIME t; GetLocalTime(&t);

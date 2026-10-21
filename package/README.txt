@@ -1,8 +1,8 @@
-Turn-Based Kingdom Hearts 2  (KINGDOM HEARTS II, fought like FINAL FANTASY X)
-=============================================================================
+Turn-Based Kingdom Hearts 2
+===========================
 
-KINGDOM HEARTS II with FINAL FANTASY X's battle rules. Every model, animation, spell, sound and
-piece of music is KINGDOM HEARTS II's own; nothing from FINAL FANTASY X is used or needed.
+KINGDOM HEARTS II with turn-based battles, inspired by FINAL FANTASY X's combat. Every model,
+animation, spell, sound and piece of music is KINGDOM HEARTS II's own.
 
 - Random encounters: enemies no longer roam the field. Walking fills a hidden meter; when it
   fills, the screen shatters and a battle starts at that part of the world's battle spot.
@@ -23,7 +23,7 @@ Backspace / Q / Esc / B to go back. F10 toggles a small debug line.
 
 How it works: dinput8.dll sits next to the KH2 executable (KH2 loads DINPUT8.dll; calls are passed
 on to Windows' own dinput8.dll). It only activates inside KINGDOM HEARTS II FINAL MIX.exe and checks
-the game's code bytes first; on any other build it stays off. Log: %LOCALAPPDATA%\KH2FFXTB\ffxtb.log.
+the game's code bytes first; on any other build it stays off. Log: %LOCALAPPDATA%\TurnBasedKH2\turnbased.log.
 Uninstall: delete dinput8.dll from the game folder.
 
 Source: https://github.com/saix93/Turn-Based-KH2

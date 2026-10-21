@@ -9,11 +9,11 @@
 #include <mutex>
 #include <atomic>
 
-#define FFXTB_VERSION "1.6.47"
+#define TBKH2_VERSION "1.6.47"
 
-// Log to %LOCALAPPDATA%\KH2FFXTB\ffxtb.log (also the file Melty collects on a crash).
+// Log to %LOCALAPPDATA%\TurnBasedKH2\turnbased.log (also the file Melty collects on a crash).
 void Log(const char* fmt, ...);
-std::wstring DataDir();          // %LOCALAPPDATA%\KH2FFXTB (created on first use)
+std::wstring DataDir();          // %LOCALAPPDATA%\TurnBasedKH2 (created on first use)
 double NowSec();                 // monotonic seconds
 
 extern uintptr_t g_base;         // KH2 module base

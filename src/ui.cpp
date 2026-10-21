@@ -572,7 +572,7 @@ void Frame(HWND hwnd) {
     if (S.phase == Phase::Returning && now - S.phaseStart < 1.2)
         dl->AddRectFilled(ImVec2(0, 0), ImVec2(sw, sh), IM_COL32(0, 0, 0, (int)(255 * std::min(1.0, (1.2 - (now - S.phaseStart)) / 0.4))));
     if (g_debug || (S.testMode && kTestLayout)) {
-        std::string d = "KH2 turn-based " FFXTB_VERSION " | " + S.debug + (S.testMode ? " | TEST" : "");
+        std::string d = "KH2 turn-based " TBKH2_VERSION " | " + S.debug + (S.testMode ? " | TEST" : "");
         Text(dl, Px(15), ImVec2(8, sh - Px(22)), IM_COL32(200, 255, 200, 220), d);
     }
 }

@@ -192,9 +192,9 @@ HRESULT STDMETHODCALLTYPE hkCreateSCHwnd(IDXGIFactory2* f, IUnknown* dev, HWND h
 
 // Read vtables from throwaway devices made on a hidden window.
 bool GetVtables(void** present, void** resize, void** exec, void** present1) {
-    WNDCLASSEXW wc{sizeof(wc), CS_CLASSDC, DefWindowProcW, 0, 0, GetModuleHandleW(nullptr), nullptr, nullptr, nullptr, nullptr, L"ffxtb_dummy", nullptr};
+    WNDCLASSEXW wc{sizeof(wc), CS_CLASSDC, DefWindowProcW, 0, 0, GetModuleHandleW(nullptr), nullptr, nullptr, nullptr, nullptr, L"tbkh2_dummy", nullptr};
     RegisterClassExW(&wc);
-    HWND w = CreateWindowW(L"ffxtb_dummy", L"", WS_OVERLAPPEDWINDOW, 0, 0, 64, 64, nullptr, nullptr, wc.hInstance, nullptr);
+    HWND w = CreateWindowW(L"tbkh2_dummy", L"", WS_OVERLAPPEDWINDOW, 0, 0, 64, 64, nullptr, nullptr, wc.hInstance, nullptr);
     DXGI_SWAP_CHAIN_DESC d{}; d.BufferCount = 2; d.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM; d.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
     d.OutputWindow = w; d.SampleDesc.Count = 1; d.Windowed = TRUE; d.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
     IDXGISwapChain* sc = nullptr; ID3D11Device* dev = nullptr; ID3D11DeviceContext* ctx = nullptr;
@@ -215,7 +215,7 @@ bool GetVtables(void** present, void** resize, void** exec, void** present1) {
         if (SUCCEEDED(d12->CreateCommandQueue(&qd, IID_PPV_ARGS(&q)))) { *exec = (*(void***)q)[10]; q->Release(); }
         d12->Release();
     }
-    DestroyWindow(w); UnregisterClassW(L"ffxtb_dummy", wc.hInstance);
+    DestroyWindow(w); UnregisterClassW(L"tbkh2_dummy", wc.hInstance);
     return ok;
 }
 }
