@@ -1,8 +1,8 @@
 # Turn-Based Kingdom Hearts 2
 
-**KINGDOM HEARTS II, fought like FINAL FANTASY X.** Random encounters, a visible turn order and one action per turn, played with KH2's own characters, Keyblade swings, spells and animations.
+**KINGDOM HEARTS II, fought like FINAL FANTASY X.** Random encounters, a visible turn order and one action per turn.
 
-A mod for the Steam version of *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*. Everything you see and hear in a fight is KINGDOM HEARTS II's. Only the battle rules come from FINAL FANTASY X, and nothing from FFX is used or needed.
+A mod for the Steam version of *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*.
 
 ![Sora's turn in the Beast's Castle ballroom, with the turn order, party and enemy windows](docs/beasts-castle.jpg)
 
@@ -48,46 +48,61 @@ A mod for the Steam version of *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*. Everything y
 | Confirm | Enter / Space / E | A |
 | Back | Backspace / Q / Esc | B |
 
-## Install
+## Requirements
 
-**With Melty (one click):** get it from [its Melty page](https://melty.gg/m/turn-based-kingdom-hearts-2).
-
-**By hand:**
-1. Copy `dinput8.dll` and `steam_appid.txt` from the release into the game's folder, next to `KINGDOM HEARTS II FINAL MIX.exe`.
-2. Start KINGDOM HEARTS II and load a save.
-
-To uninstall, delete `dinput8.dll` from the game folder.
-
-**Needs:** *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-* (Steam). Single player.
-
-## How it works
-
-`dinput8.dll` is a proxy: KH2 loads it at startup, and it passes every DirectInput call on to Windows' own `dinput8.dll`.
-- **Where it runs:** only inside `KINGDOM HEARTS II FINAL MIX.exe`, and only after it has checked the game's code bytes. On any other build it stays off.
-- **What it does:** it hooks the game with MinHook and drives KH2's own actors, commands and menus. It draws its windows with Dear ImGui (DirectX 11/12).
-- **Its data:** the battle rules come from the JSON sheets in `sheets/`: commands, magic, items, partner moves, battle spots per room, and timings and camera settings.
-- **Log:** `%LOCALAPPDATA%\KH2FFXTB\ffxtb.log` (the previous session is kept as `ffxtb.prev.log`). F10 shows a small debug line.
+- *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*, the **Steam** version (the mod checks the game's code and stays off on any other build).
+- Single player, Windows.
 
 ## Building
 
-Requires Windows, Visual Studio 2022 (C++ x64 tools) and Python 3.
+You need:
+- **Visual Studio 2022 or later** (Community is free) with the **"Desktop development with C++"** workload. It brings the MSVC x64 compiler and the Windows SDK (DirectX 11/12).
+- **Python 3**, on your `PATH`.
+- **Git**.
 
-```bash
-git clone --recursive https://github.com/saix93/Turn-Based-KH2.git
-```
+1. Clone the repo **with its submodules** (Dear ImGui and MinHook):
+   ```
+   git clone --recursive https://github.com/saix93/Turn-Based-KH2.git
+   cd Turn-Based-KH2
+   ```
+   If you already cloned it without `--recursive`, run `git submodule update --init`.
+2. Build it from PowerShell or a command prompt:
+   ```
+   powershell -ExecutionPolicy Bypass -File build.ps1 -Version 1.0.0
+   ```
+   `build.ps1` does everything:
+   - generates `src/gen/sheets.h` from the JSON in `sheets/`;
+   - finds Visual Studio by itself (through `vswhere`) and loads its x64 environment;
+   - compiles the mod, Dear ImGui and MinHook into one DLL. The C runtime is linked statically, so no Visual C++ redistributable is needed.
+3. The result is `dist/KH2xFFX-1.0.0/dinput8.dll`.
 
-```bash
-./pack.sh 1.6.47
-```
+`pack.sh <version>` (from Git Bash) does the same build, also stamps the version into the mod, and zips the DLL with `steam_appid.txt`, the readme and the licenses.
 
-`pack.sh` generates `src/gen/sheets.h` from `sheets/`, builds `dist/KH2xFFX-<version>/dinput8.dll` through `build.ps1`, and zips the release.
+## Installing
+
+1. Copy `dinput8.dll` into the game's folder, next to `KINGDOM HEARTS II FINAL MIX.exe`. In a default Steam install that's `steamapps\common\KINGDOM HEARTS -HD 1.5+2.5 ReMIX-\`.
+2. Start the game as usual from Steam, pick KINGDOM HEARTS II and load a save.
+
+**Optional:** copy `package/steam_appid.txt` to the same folder if you want to start `KINGDOM HEARTS II FINAL MIX.exe` directly. Without it, Steam restarts the game through its launcher.
+
+**Uninstall:** delete `dinput8.dll` from the game folder.
+
+## How it works
+
+`dinput8.dll` is a proxy. KH2 loads `dinput8.dll` at startup, and Windows looks in the game's folder before `System32`, so it finds this one first. The mod loads Windows' real `dinput8.dll` itself and passes every DirectInput call on to it.
+- **Where it runs:** only inside `KINGDOM HEARTS II FINAL MIX.exe`, and only after it has checked the game's code bytes. On any other build, or in the other games of the collection, it stays off.
+- **What it does:** it hooks KH2's functions with [MinHook](https://github.com/TsudaKageyu/minhook) and drives KH2's own actors, commands and menus. The hooks cover the per-frame entity loop, the command executor, the freeze check, input, the camera, and the frame being presented. It draws its windows with Dear ImGui (DirectX 11/12).
+- **Its data:** the battle rules come from the JSON sheets in `sheets/`: commands, magic, items, partner moves, battle spots per room, and timings and camera settings. They are compiled into the DLL.
+- **Log:** `%LOCALAPPDATA%\KH2FFXTBfxtb.log` (the previous session is kept as `ffxtb.prev.log`). F10 shows a small debug line.
+
+## Project layout
 
 | Folder | What's in it |
 | --- | --- |
-| `src/` | The mod: battle state machine (`battle.cpp`), game access and hooks (`game.cpp`), UI (`ui.cpp`), Melty test mode (`testmode.cpp`) |
+| `src/` | The mod: battle state machine (`battle.cpp`), game access and hooks (`game.cpp`), rendering (`render.cpp`), UI (`ui.cpp`), automated test mode (`testmode.cpp`) |
 | `sheets/` | The battle data, as JSON |
 | `tools/` | Research and sheet-generation scripts |
-| `package/` | Files shipped with each release (readme, licenses) |
+| `package/` | Files shipped with each release (readme, licenses, `steam_appid.txt`) |
 | `third_party/` | Dear ImGui and MinHook (git submodules) |
 
 ## Credits and license
