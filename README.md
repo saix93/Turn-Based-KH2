@@ -4,6 +4,8 @@
 
 A mod for the Steam version of *KINGDOM HEARTS -HD 1.5+2.5 ReMIX-*.
 
+> **Note:** boss battles have not been tested with the turn-based system yet. Random encounters are what has been tested.
+
 ![Sora's turn in the Beast's Castle ballroom, with the turn order, party and enemy windows](docs/beasts-castle.jpg)
 
 | | |

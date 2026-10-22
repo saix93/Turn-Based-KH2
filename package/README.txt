@@ -16,6 +16,9 @@ animation, spell, sound and piece of music is KINGDOM HEARTS II's own.
   when the battle ends. If Sora falls, the battle is lost.
 - Win or escape and you are put back where you were walking.
 
+Note: boss battles have not been tested with the turn-based system yet. Random encounters are
+what has been tested.
+
 Needs: KINGDOM HEARTS -HD 1.5+2.5 ReMIX- (Steam). Single player.
 
 Controls in battle: arrows / WASD / D-pad to choose, Enter / Space / E / A to confirm,
